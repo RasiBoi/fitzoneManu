@@ -208,7 +208,7 @@ $profile_image = isset($user['profile_image']) && !empty($user['profile_image'])
                                                 <td><?php echo htmlspecialchars($member['username']); ?></td>
                                                 <td><?php echo htmlspecialchars($member['first_name'] . ' ' . $member['last_name']); ?></td>
                                                 <td><?php echo htmlspecialchars($member['email']); ?></td>
-                                                <td><?php echo htmlspecialchars(isset($member['phone']) ? $member['phone'] : 'N/A'); ?></td>
+                                                <td><?php echo htmlspecialchars(isset($1) ? $1 : 'N/A'); ?></td>
                                                 <td><?php echo date('M d, Y', strtotime($member['created_at'])); ?></td>
                                                 <td>
                                                     <a href="?edit=<?php echo $member['id']; ?>" class="btn btn-sm btn-warning">
@@ -278,7 +278,7 @@ $profile_image = isset($user['profile_image']) && !empty($user['profile_image'])
                         <div class="mb-3">
                             <label for="phone" class="form-label">Phone</label>
                             <input type="text" class="form-control" id="phone" name="phone" 
-                                   value="<?php echo $edit_member ? htmlspecialchars(isset($edit_member['phone']) ? $edit_member['phone'] : '') : ''; ?>">
+                                   value="<?php echo $edit_member ? htmlspecialchars(isset($1) ? $1 : '') : ''; ?>">
                         </div>
                         
                         <?php if (!$edit_member): ?>

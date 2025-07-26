@@ -87,9 +87,9 @@
 }
 
 .about-section .about-text {
-    color: #f0f0f0 !important;
+    color: #000000 !important;
     font-weight: 500 !important;
-    text-shadow: 0 0 1px rgba(0, 0, 0, 0.5) !important;
+    text-shadow: none !important;
 }
 
 /* Services Section Text Enhancement */

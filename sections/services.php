@@ -19,7 +19,7 @@ if (!defined('FITZONE_APP')) {
                     <h2 class="section-title">Premium <span class="text-black">Fitness Services</span></h2>
                     <div class="section-separator mx-auto"><span></span></div>
                     <p class="section-description">
-                        Discover our comprehensive range of fitness services designed to help you achieve your health and wellness goals.
+                        Discover our comprehensive range of fitness services designed to help you achieve your health and wellness goals. Whether you're aiming for strength, endurance, flexibility, or overall well-being, we have the perfect program for you.
                     </p>
                 </div>
             </div>
@@ -37,13 +37,10 @@ if (!defined('FITZONE_APP')) {
                         </div>
                         <h3 class="service-title">Strength Training</h3>
                         <p class="service-description">
-                            Build muscle, increase strength, and boost metabolism with our comprehensive strength training programs.
+                            Increase strength, and boost metabolism with our strength training programs.
                         </p>
                         <div class="service-features">
-                            <div class="service-feature">
-                                <i class="fas fa-check"></i>
-                                <span>Premium Equipment</span>
-                            </div>
+                            
                             <div class="service-feature">
                                 <i class="fas fa-check"></i>
                                 <span>Expert Guidance</span>
@@ -64,15 +61,12 @@ if (!defined('FITZONE_APP')) {
                                 <i class="fas fa-running"></i>
                             </div>
                         </div>
-                        <h3 class="service-title">Cardio Fitness</h3>
+                        <h3 class="service-title">Cardio</h3>
                         <p class="service-description">
-                            Improve heart health, endurance, and burn calories with our state-of-the-art cardio equipment and classes.
+                            Improve endurance and burn calories with the cardio classes.
                         </p>
                         <div class="service-features">
-                            <div class="service-feature">
-                                <i class="fas fa-check"></i>
-                                <span>High-Tech Machines</span>
-                            </div>
+                            
                             <div class="service-feature">
                                 <i class="fas fa-check"></i>
                                 <span>HIIT Training</span>
@@ -95,17 +89,14 @@ if (!defined('FITZONE_APP')) {
                         </div>
                         <h3 class="service-title">Group Classes</h3>
                         <p class="service-description">
-                            Energize your workouts with our dynamic group fitness classes led by professional instructors.
+                            Improve your workouts with our group fitness classes led by professional instructors.
                         </p>
                         <div class="service-features">
                             <div class="service-feature">
                                 <i class="fas fa-check"></i>
-                                <span>50+ Weekly Classes</span>
+                                <span>5+ Weekly Classes</span>
                             </div>
-                            <div class="service-feature">
-                                <i class="fas fa-check"></i>
-                                <span>Varied Intensity</span>
-                            </div>
+                            
                             <div class="service-feature">
                                 <i class="fas fa-check"></i>
                                 <span>Community Support</span>
@@ -124,17 +115,14 @@ if (!defined('FITZONE_APP')) {
                         </div>
                         <h3 class="service-title">Personal Training</h3>
                         <p class="service-description">
-                            Accelerate your results with one-on-one coaching tailored to your specific fitness goals.
+                            Improve your results with one-on-one coaching tailored to your specific fitness goals.
                         </p>
                         <div class="service-features">
                             <div class="service-feature">
                                 <i class="fas fa-check"></i>
                                 <span>Certified Trainers</span>
                             </div>
-                            <div class="service-feature">
-                                <i class="fas fa-check"></i>
-                                <span>Goal Tracking</span>
-                            </div>
+                           
                             <div class="service-feature">
                                 <i class="fas fa-check"></i>
                                 <span>Nutritional Advice</span>

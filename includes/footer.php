@@ -20,7 +20,7 @@ $currentYear = date('Y');
                         <h4 class="mb-3" style="color: #000000; font-weight: bold;">About</h4>
                         <img src="<?php echo SITE_URL; ?>assets/images/fitzone.png" alt="FitZone" height="20" class="mb-3" style="filter: grayscale(100%);">
                         <p class="text-dark">
-                            FitZone is Kurunegala's premier fitness center offering state-of-the-art equipment, expert trainers, and diverse fitness programs designed to help you achieve your health and wellness goals.
+                            FitZone is Kurunegala's premier fitness center, offering state-of-the-art equipment, guidance from expert trainers, and a diverse range of fitness programs—all designed to help you achieve your health and wellness goals.
                         </p>
                         <div class="social-links mt-3">
                             <a href="#" class="text-dark me-3"><i class="fab fa-facebook-f"></i></a>
@@ -51,7 +51,7 @@ $currentYear = date('Y');
                         <ul class="list-unstyled footer-contact">
                             <li class="d-flex mb-3">
                                 <i class="fas fa-map-marker-alt mt-1 me-3" style="color: #000000;"></i>
-                                <span>123 Fitness Avenue, Kurunegala,<br>North Western Province, Sri Lanka</span>
+                                <span>No. 123, Main Street,<br>Kurunegala, Sri Lanka</span>
                             </li>
                             <li class="d-flex mb-3">
                                 <i class="fas fa-phone-alt mt-1 me-3" style="color: #000000;"></i>

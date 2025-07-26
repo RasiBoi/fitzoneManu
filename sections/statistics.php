@@ -11,10 +11,10 @@ if (!defined('FITZONE_APP')) {
 
 // Hardcoded statistics values
 $stats = [
-    'trainer_count' => 50,
-    'active_clients' => 600,
-    'cert_count' => 30,
-    'total_experience' => 5
+    'trainer_count' => 6,
+    'active_clients' => 100,
+    'cert_count' => 10,
+    'total_experience' => 3
 ];
 ?>
 
@@ -58,7 +58,7 @@ $stats = [
             <div class="stat-number">
                 <span class="counter-number" data-target="<?php echo $stats['total_experience']; ?>">0</span>+
             </div>
-            <div class="stat-label">Years Experience</div>
+            <div class="stat-label">Years of Experience</div>
         </div>
     </div>
 </div>

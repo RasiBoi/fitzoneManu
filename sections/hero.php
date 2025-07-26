@@ -17,14 +17,13 @@ if (!defined('FITZONE_APP')) {
     <div class="container position-relative">
         <div class="row align-items-center hero-content" style="min-height: 550px;">
             <div class="col-lg-6 hero-text-area">
-                <div class="hero-subtitle" style="color: #000000; font-weight: 600;">TRANSFORM YOUR PHYSIQUE</div>
+                <div class="hero-subtitle" style="color: #000000; font-weight: 600;">PHYSIQUE IS EVERYTHING</div>
                 <h1 class="hero-title" style="color: #000000;">
-                    <span class="text-black" style="font-weight: 700;">ELEVATE</span> YOUR
-                    <span class="d-block" style="color: #000000; font-weight: 700;">FITNESS JOURNEY</span>
+                    <span class="text-black" style="font-weight: 700;">Transform</span> Your Body.
+                    <span class="d-block" style="color: #000000; font-weight: 700;">Energize Your Life.</span>
                 </h1>
                 <p class="hero-description" style="color: #333333; font-weight: 500;">
-                    Join FitZone and experience premium fitness with state-of-the-art equipment, 
-                    expert trainers, and a motivating community ready to help you achieve your goals.
+                    Your ultimate fitness destination. FitZone provides state-of-the-art equipment, expert trainers, and a powerful community dedicated to crushing your goals.
                 </p>
                 <div class="hero-buttons">
                     <a href="membership.php" class="btn btn-dark btn-lg hero-btn">

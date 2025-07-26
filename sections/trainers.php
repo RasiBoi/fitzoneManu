@@ -50,12 +50,11 @@ try {
         <div class="row">
             <div class="col-lg-8 mx-auto text-center mb-5">
                 <div class="section-heading">
-                    <span class="section-subtitle">EXPERT INSTRUCTORS</span>
-                    <h2 class="section-title">Meet Our <span class="text-black">Professional Trainers</span></h2>
+                    <span class="section-subtitle">INSTRUCTORS</span>
+                    <h2 class="section-title">Here is Our <span class="text-black">Professional Trainers</span></h2>
                     <div class="section-separator mx-auto"><span></span></div>
                     <p class="trainers-intro">
-                        Our certified trainers bring years of experience and specialized expertise to help you achieve your fitness goals. 
-                        Whether you're looking to build strength, lose weight, or improve flexibility, our team is here to guide you.
+                        Work alongside our team of certified trainers, who bring extensive experience and specialized knowledge to every session. Whether your focus is on building strength, achieving weight loss, or enhancing flexibility, our experts are dedicated to guiding you toward your fitness aspirations.
                     </p>
                 </div>
             </div>

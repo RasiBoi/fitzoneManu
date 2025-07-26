@@ -66,12 +66,11 @@ error_log("Processing " . count($featured_classes) . " classes for display");
         <div class="row">
             <div class="col-lg-9 mx-auto text-center mb-5">
                 <div class="section-heading mb-5">
-                    <span class="section-subtitle">OUR CLASSES</span>
-                    <h2 class="section-title text-black">Energize With Our <span class="fw-bold">Fitness Classes</span></h2>
+                    <span class="section-subtitle">CLASSES</span>
+                    <h2 class="section-title text-black">Get fit With Our <span class="fw-bold">Fitness Classes</span></h2>
                     <div class="section-separator"><span></span></div>
                     <p class="classes-intro">
-                        Join our dynamic group fitness classes led by expert instructors designed to challenge, motivate, 
-                        and transform your body. With options for all fitness levels, you'll find the perfect class to meet your goals.
+                        Experience the energy of our expert-led group fitness classes, crafted to challenge your limits, ignite your motivation, and transform your physique. With diverse options for every fitness level, discover the ideal class to propel you toward your goals.
                     </p>
                 </div>
             </div>
@@ -80,7 +79,7 @@ error_log("Processing " . count($featured_classes) . " classes for display");
         <!-- Classes grid layout -->
         <div class="classes-grid">
             <?php if (count($featured_classes) > 0): ?>
-                <div class="row">
+                <div class="row justify-content-center">
                     <?php 
                     // Final display - ensure no duplicates were introduced
                     $displayed_names = []; 
@@ -91,7 +90,7 @@ error_log("Processing " . count($featured_classes) . " classes for display");
                         if (in_array($current_name, $displayed_names)) continue;
                         $displayed_names[] = $current_name;
                     ?>
-                        <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="col-lg-3 col-md-6 mb-4 mx-auto" style="max-width: 300px;">
                             <div class="class-card">
                                 <div class="class-image">
                                     <img src="<?php echo $class['image']; ?>" alt="<?php echo $class['name']; ?>" class="img-fluid">

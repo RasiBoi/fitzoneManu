@@ -57,8 +57,7 @@ $plan_features = [
                     <div class="section-separator"><span></span></div>
                 </div>
                 <p class="membership-intro">
-                    We offer flexible membership options designed to fit your lifestyle and fitness goals.
-                    Join our fitness community today and start your transformation.
+                 Discover our flexible membership options, thoughtfully crafted to align with your unique lifestyle and fitness aspirations. Become part of our thriving fitness community today and begin your personal transformation journey.
                 </p>
             </div>
         </div>

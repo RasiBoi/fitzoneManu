@@ -58,12 +58,11 @@ $featured_classes = [
             <div class="col-lg-5">
                 <div class="contact-info">
                     <div class="section-heading">
-                        <span class="section-subtitle">GET IN TOUCH</span>
-                        <h2 class="section-title">Interested in a <span class="text-black">Class?</span></h2>
+                        <h2 class="section-title">Are You Interest in our <span class="text-black">Class?</span></h2>
                         <div class="section-separator"><span></span></div>
                     </div>
                     <p class="contact-description">
-                        Have questions about our classes or want personalized fitness advice? Fill out the form and our team of fitness experts will get back to you within 24 hours.
+                        Got questions about our classes or looking for personalized fitness advice? Simply fill out the form below, and our team of dedicated fitness experts will get back to you within 24 hours.
                     </p>
                     <div class="contact-details">
                         <div class="contact-detail-item">
@@ -72,7 +71,7 @@ $featured_classes = [
                             </div>
                             <div class="contact-text">
                                 <h4>Our Location</h4>
-                                <p>123 Fitness Street, Workout City, 10001</p>
+                                <p>No. 123, Main Street,Kurunegala,Sri Lanka.</p>
                             </div>
                         </div>
                         <div class="contact-detail-item">
@@ -81,7 +80,7 @@ $featured_classes = [
                             </div>
                             <div class="contact-text">
                                 <h4>Phone Number</h4>
-                                <p>+1 (555) 123-4567</p>
+                                <p>+94 70 123-4567</p>
                             </div>
                         </div>
                         <div class="contact-detail-item">
@@ -90,7 +89,7 @@ $featured_classes = [
                             </div>
                             <div class="contact-text">
                                 <h4>Email Address</h4>
-                                <p>info@fitzone.com</p>
+                                <p>info@FitZone.com</p>
                             </div>
                         </div>
                     </div>
@@ -126,7 +125,7 @@ $featured_classes = [
                             </div>
                             <div class="col-md-12">
                                 <button type="submit" class="btn btn-primary btn-contact">
-                                    <span>Send Message</span>
+                                    <span>Send Us A Message</span>
                                     <i class="fas fa-paper-plane"></i>
                                 </button>
                             </div>
