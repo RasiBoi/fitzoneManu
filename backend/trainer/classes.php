@@ -142,7 +142,7 @@ if (isset($_GET['delete']) && !empty($_GET['delete'])) {
     $class_id = (int)$_GET['delete'];
     
     // Verify the class belongs to this trainer
-    $class_to_delete = $db->fetchSingle("SELECT * FROM fitness_classes WHERE id = ? AND trainer_id = ?", [$class_id, $trainer['id']]);
+    $class_to_delete = $db->fetchSingle("SELECT * FROM fitness_classes WHERE id = ? AND trainer_id = ?", [$class_id, $trainer_id]);
     
     if ($class_to_delete) {
         $result = $db->query("DELETE FROM fitness_classes WHERE id = ?", [$class_id]);
@@ -308,9 +308,10 @@ $db->query("
 ");
 
 // Check if there are any classes for this trainer, if not, create sample classes
+$trainer_id = isset($trainer['id']) ? $trainer['id'] : 0;
 $has_classes = $db->fetchSingle(
     "SELECT COUNT(*) as count FROM fitness_classes WHERE trainer_id = ?",
-    [$trainer['id']]
+    [$trainer_id]
 );
 
 if ($has_classes['count'] == 0) {
@@ -352,7 +353,7 @@ if ($has_classes['count'] == 0) {
             [
                 $class['name'], 
                 $class['description'], 
-                $trainer['id'], 
+                $trainer_id, 
                 $class['day_of_week'], 
                 $class['start_time'], 
                 $class['end_time'], 
@@ -373,14 +374,14 @@ $today_classes = $db->fetchAll("
     SELECT * FROM fitness_classes 
     WHERE trainer_id = ? AND day_of_week = ? 
     ORDER BY start_time ASC
-", [$trainer['id'], $today_weekday]);
+", [$trainer_id, $today_weekday]);
 
 // Fetch all classes for this trainer
 $classes = $db->fetchAll("
     SELECT * FROM fitness_classes 
     WHERE trainer_id = ? 
     ORDER BY FIELD(day_of_week, 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'), start_time ASC
-", [$trainer['id']]);
+", [$trainer_id]);
 
 // Check if viewing a specific class
 $view_class = null;
@@ -399,7 +400,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
     $view_class = $db->fetchSingle("
         SELECT * FROM fitness_classes 
         WHERE id = ? AND trainer_id = ?
-    ", [$class_id, $trainer['id']]);
+    ", [$class_id, $trainer_id]);
     
     if ($view_class) {
         // Get members enrolled in this class
@@ -421,7 +422,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update_attendance']))
     // Check if class belongs to this trainer
     $class_check = $db->fetchSingle("
         SELECT id FROM fitness_classes WHERE id = ? AND trainer_id = ?
-    ", [$class_id, $trainer['id']]);
+    ", [$class_id, $trainer_id]);
     
     if ($class_check) {
         // Update class notes if provided
@@ -811,7 +812,13 @@ $page_title = $view_class ? 'Class Details' : 'Manage Classes';
                                         
                                         // Sort by day
                                         uksort($classes_by_day, function($a, $b) use ($day_order) {
-                                            return $day_order[$a] <=> $day_order[$b];
+                                            if ($day_order[$a] < $day_order[$b]) {
+                                                return -1;
+                                            } elseif ($day_order[$a] > $day_order[$b]) {
+                                                return 1;
+                                            } else {
+                                                return 0;
+                                            }
                                         });
                                         
                                         foreach ($classes_by_day as $day => $day_classes):
@@ -822,7 +829,13 @@ $page_title = $view_class ? 'Class Details' : 'Manage Classes';
                                             
                                             // Sort classes by time
                                             usort($day_classes, function($a, $b) {
-                                                return $a['start_time'] <=> $b['start_time'];
+                                                if ($a['start_time'] < $b['start_time']) {
+                                                    return -1;
+                                                } elseif ($a['start_time'] > $b['start_time']) {
+                                                    return 1;
+                                                } else {
+                                                    return 0;
+                                                }
                                             });
                                             
                                             foreach ($day_classes as $class): 

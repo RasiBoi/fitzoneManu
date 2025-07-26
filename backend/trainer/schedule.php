@@ -99,6 +99,9 @@ $classes = $db->fetchAll(
     [$trainer['id']]
 );
 
+// Ensure $classes is an array
+$classes = is_array($classes) ? $classes : [];
+
 // Organize classes by day and time
 $schedule = [];
 foreach ($days_of_week as $day) {
@@ -319,7 +322,7 @@ $profile_image = isset($user['profile_image']) && !empty($user['profile_image'])
                                                         <div class="current-time-marker" style="top: <?php echo $marker_position; ?>%;"></div>
                                                     <?php endif; ?>
                                                     
-                                                    <?php if (isset($schedule[$day][$slot_index]) && $schedule[$day][$slot_index] !== 'blocked'): ?>
+                                                    <?php if (isset($schedule[$day][$slot_index]) && $schedule[$day][$slot_index] !== 'blocked' && is_array($schedule[$day][$slot_index])): ?>
                                                         <?php 
                                                         $class_info = $schedule[$day][$slot_index];
                                                         $class = $class_info['class'];
@@ -353,10 +356,10 @@ $profile_image = isset($user['profile_image']) && !empty($user['profile_image'])
                                                             </div>
                                                         </div>
                                                         
-                                                    <?php elseif ($schedule[$day][$slot_index] !== 'blocked'): ?>
-                                                        <div class="empty-slot"></div>
-                                                    <?php else: ?>
+                                                    <?php elseif (isset($schedule[$day][$slot_index]) && $schedule[$day][$slot_index] === 'blocked'): ?>
                                                         <div class="blocked-slot"></div>
+                                                    <?php else: ?>
+                                                        <div class="empty-slot"></div>
                                                     <?php endif; ?>
                                                 </td>
                                             <?php endforeach; ?>
