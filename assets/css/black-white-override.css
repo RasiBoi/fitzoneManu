@@ -1,0 +1,687 @@
+/**
+ * FitZone Fitness Center
+ * Black and White Theme Override
+ * This CSS forces the black and white theme even if there are other styles being applied
+ */
+
+/* Dashboard Black & White Theme */
+:root {
+    --primary-color: #000000;
+    --secondary-color: #333333;
+    --text-color: #000000;
+    --bg-color: #ffffff;
+    --light-bg: #f5f5f5;
+    --border-color: #dddddd;
+    --sidebar-active: #f0f0f0;
+    --sidebar-hover: #f9f9f9;
+}
+
+/* Dashboard General Styles */
+.dashboard-container {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.card {
+    background-color: var(--bg-color) !important;
+    border: 1px solid var(--border-color) !important;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05) !important;
+}
+
+.btn-primary {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    color: var(--bg-color) !important;
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color) !important;
+    border-color: var(--secondary-color) !important;
+}
+
+/* Dashboard Tables */
+.table {
+    background-color: var(--bg-color) !important;
+    color: var(--text-color) !important;
+    border-color: var(--border-color) !important;
+}
+
+thead th {
+    background-color: var(--light-bg) !important;
+    color: var(--text-color) !important;
+    border-color: var(--border-color) !important;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: var(--light-bg) !important;
+}
+
+/* Dashboard Forms */
+.form-control {
+    border: 1px solid var(--border-color) !important;
+    background-color: var(--bg-color) !important;
+    color: var(--text-color) !important;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color) !important;
+    box-shadow: 0 0 0 0.25rem rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Dashboard Progress */
+.progress {
+    background-color: var(--light-bg) !important;
+}
+
+.progress-bar {
+    background-color: var(--primary-color) !important;
+}
+
+/* Dashboard Alerts */
+.alert {
+    background-color: var(--light-bg) !important;
+    border-color: var(--border-color) !important;
+    color: var(--text-color) !important;
+}
+
+/* Dashboard Links */
+.dashboard-container a {
+    color: var(--primary-color) !important;
+}
+
+.dashboard-container a:hover {
+    color: var(--secondary-color) !important;
+}
+
+/* Force Hero Section to use white background and black text */
+.hero-section {
+    position: relative !important;
+    min-height: 700px !important;
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    background-image: none !important;
+    color: #000000 !important;
+}
+
+/* Override any particles background */
+#hero-particles {
+    background: transparent !important;
+}
+
+/* Override purple background (if it exists) */
+section[style*="background"] {
+    background: #ffffff !important;
+}
+
+/* Override specific elements in the hero section */
+#hero-section {
+    background: #ffffff !important;
+}
+
+/* Override for the particles.js canvas */
+#hero-particles canvas {
+    background: transparent !important;
+}
+
+.hero-section::before,
+.hero-section::after {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    background-image: none !important;
+}
+
+.hero-overlay {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.85)) !important;
+}
+
+.hero-subtitle {
+    color: #000000 !important;
+}
+
+.hero-subtitle:before {
+    background: #000000 !important;
+}
+
+.text-primary-gradient,
+.text-black {
+    background: none !important;
+    -webkit-background-clip: initial !important;
+    background-clip: initial !important;
+    color: #000000 !important;
+    -webkit-text-fill-color: #000000 !important;
+}
+
+.hero-description {
+    color: #000 !important;
+}
+
+.hero-background-image {
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    background-image: url('../images/hero-new.jpg') !important;
+    background-position: center right !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    filter: grayscale(100%) !important;
+    border-radius: 10px !important;
+}
+
+.hero-shape-1, 
+.hero-shape-2 {
+    display: none !important;
+}
+
+.btn-primary, 
+.btn-dark {
+    background-color: #000000 !important;
+    border-color: #000000 !important;
+}
+
+.btn-primary:hover {
+    background-color: #333333 !important;
+    border-color: #333333 !important;
+}
+
+/* Hero stats removed */
+
+/* Statistics Section */
+.trainer-stats-section {
+    margin-top: -80px !important;
+    margin-bottom: 50px !important;
+    position: relative !important;
+    z-index: 1 !important;
+    display: flex !important;
+    justify-content: center !important;
+}
+
+.stats-container {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 20px !important;
+    padding: 40px !important;
+    background: #ffffff !important;
+    border: 2px solid #000000 !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1) !important;
+    max-width: 1400px !important;
+    width: 100% !important;
+}
+
+.stat-item {
+    text-align: center !important;
+    padding: 20px !important;
+    position: relative !important;
+    border-right: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+.stat-item:last-child {
+    border-right: none !important;
+}
+
+.stat-icon {
+    font-size: 28px !important;
+    color: #000000 !important;
+    margin-bottom: 15px !important;
+    text-shadow: none !important;
+}
+
+.stat-number {
+    font-size: 42px !important;
+    font-weight: 800 !important;
+    color: #000000 !important;
+    line-height: 1 !important;
+    margin-bottom: 15px !important;
+    text-shadow: none !important;
+}
+
+.counter-number {
+    color: #000000 !important;
+}
+
+.stat-label {
+    font-size: 16px !important;
+    color: #000000 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 2px !important;
+    font-weight: 600 !important;
+    text-shadow: none !important;
+}
+
+/* Services Section */
+.services-section {
+    background-color: #fff !important;
+    color: #000 !important;
+}
+
+.services-section .text-primary,
+.services-section .text-black {
+    color: #000 !important;
+}
+
+.service-card {
+    background-color: #fff !important;
+    border: 1px solid #ddd !important;
+}
+
+.service-icon {
+    background-color: #f0f0f0 !important;
+    color: #000 !important;
+}
+
+.service-icon i {
+    color: #000 !important;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    background-color: #f9f9f9 !important;
+    color: #000 !important;
+}
+
+.testimonial-card {
+    background-color: #fff !important;
+    border: 1px solid #ddd !important;
+}
+
+.client-photo img {
+    filter: grayscale(100%) !important;
+}
+
+.testimonial-rating .filled {
+    color: #333 !important;
+}
+
+/* Contact/CTA Section */
+#cta-section {
+    background-color: #fff !important;
+}
+
+#cta-section .text-primary,
+#cta-section .text-black {
+    color: #000 !important;
+}
+
+/* Footer */
+.footer {
+    background-color: #f8f8f8 !important;
+    color: #000 !important;
+}
+
+.footer h4, 
+.footer h5 {
+    color: #000 !important;
+}
+
+.footer a, 
+.footer i {
+    color: #333 !important;
+}
+
+.footer img {
+    filter: grayscale(100%) !important;
+}
+
+/* Force navbar to use white background with black text */
+#custom-navbar {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Make ALL navbar text black for visibility */
+#custom-navbar .navbar-nav .nav-link {
+    color: #000000 !important;
+    font-weight: 600 !important; /* Make it bold for better visibility */
+}
+
+#custom-navbar .nav-link:hover,
+#custom-navbar .nav-link.active {
+    color: #333333 !important;
+}
+
+/* About Section Black and White Overrides */
+.about-section {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    padding: 60px 0 !important;
+}
+
+.about-section .section-subtitle {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+}
+
+.about-section .section-title {
+    color: #ffffff !important;
+    font-weight: 800 !important;
+}
+
+.about-section .text-black {
+    color: #ffffff !important;
+    font-weight: 800 !important;
+}
+
+.about-section .section-separator {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.about-section .section-separator span {
+    background-color: #ffffff !important;
+}
+
+.about-text {
+    color: #f0f0f0 !important;
+    font-weight: 500 !important;
+    line-height: 1.8 !important;
+    font-size: 1.1rem !important;
+}
+
+/* About features section styling */
+.about-features {
+    padding: 30px 0 !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+    margin-top: 30px !important;
+}
+
+.about-feature {
+    padding: 20px !important;
+    margin-bottom: 20px !important;
+    background-color: #111111 !important;
+    border: 1px solid #333333 !important;
+    transition: all 0.3s ease !important;
+}
+
+.about-feature:hover {
+    background-color: #1a1a1a !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3) !important;
+    transform: translateY(-5px) !important;
+}
+
+.about-feature-icon {
+    font-size: 2.5rem !important;
+    color: #ffffff !important;
+    margin-bottom: 15px !important;
+}
+
+.about-feature-content h4 {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    margin-bottom: 10px !important;
+}
+
+.about-feature-content p {
+    color: #dddddd !important;
+    font-size: 0.9rem !important;
+}
+
+/* Classes Section Black and White Overrides */
+.classes-section {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    padding: 80px 0 60px 0 !important;
+}
+
+.classes-section .section-subtitle {
+    color: #000000 !important;
+    font-weight: bold !important;
+}
+
+.classes-section .section-title {
+    color: #000000 !important;
+}
+
+.classes-section .text-primary {
+    color: #000000 !important;
+}
+
+.classes-section .section-separator {
+    background: rgba(0, 0, 0, 0.2) !important;
+}
+
+.classes-section .section-separator span {
+    background: #000000 !important;
+}
+
+.classes-section .classes-intro {
+    color: #333333 !important;
+}
+
+.class-card {
+    background-color: #ffffff !important;
+    border: 1px solid #000000 !important;
+}
+
+.class-title {
+    color: #000000 !important;
+}
+
+.class-trainer {
+    color: #333333 !important;
+}
+
+.class-description {
+    color: #555555 !important;
+}
+
+.class-schedule {
+    color: #000000 !important;
+}
+
+.class-difficulty {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+}
+
+.class-duration {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+}
+
+.beginner, .intermediate, .advanced, .all {
+    background-color: #000000 !important;
+    border: 1px solid white !important;
+}
+
+.class-image img {
+    filter: grayscale(100%) !important;
+    transition: all 0.3s ease !important;
+}
+
+.class-card:hover .class-image img {
+    filter: grayscale(80%) !important;
+}
+
+/* Trainers Section Black and White Overrides */
+.trainers-section {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+}
+
+.trainers-section .section-subtitle {
+    color: #000000 !important;
+}
+
+.trainers-section .section-title {
+    color: #000000 !important;
+}
+
+.trainers-section .text-primary,
+.trainers-section .text-black {
+    color: #000000 !important;
+}
+
+.trainers-section .section-separator span {
+    background: #000000 !important;
+}
+
+.trainer-card-inner {
+    background: #ffffff !important;
+    border: 1px solid #000000 !important;
+}
+
+.trainer-name,
+.trainer-specialization,
+.trainer-experience {
+    color: #000000 !important;
+}
+
+.trainer-bio {
+    color: #333333 !important;
+}
+
+.trainer-image {
+    filter: grayscale(100%) !important;
+    border: 1px solid #000000 !important;
+}
+
+/* Membership Section Black and White Overrides */
+.membership-section {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+}
+
+.membership-section .section-subtitle {
+    color: #000000 !important;
+}
+
+.membership-section .section-title {
+    color: #000000 !important;
+}
+
+.membership-section .text-primary,
+.membership-section .text-black {
+    color: #000000 !important;
+}
+
+.membership-section .section-separator span {
+    background: #000000 !important;
+}
+
+.membership-section .membership-intro {
+    color: #333333 !important;
+}
+
+.duration-tabs {
+    background: rgba(240, 240, 240, 0.9) !important;
+    border: 1px solid #000000 !important;
+}
+
+.tab-slider {
+    background: #000000 !important;
+}
+
+.duration-option {
+    color: rgba(0,0,0,0.7) !important;
+}
+
+.duration-option.active {
+    color: #ffffff !important;
+}
+
+.membership-card {
+    background-color: #ffffff !important;
+    border: 1px solid #000000 !important;
+}
+
+.membership-card.popular {
+    border: 2px solid #000000 !important;
+}
+
+.popular-badge {
+    background: #000000 !important;
+}
+
+.card-header {
+    background-color: #f8f8f8 !important;
+    border-bottom: 1px solid rgba(0,0,0,0.1) !important;
+}
+
+.plan-name {
+    color: #000000 !important;
+}
+
+.amount {
+    color: #000000 !important;
+}
+
+.currency, .period {
+    color: #333333 !important;
+}
+
+.card-features li {
+    color: #000000 !important;
+}
+
+.card-features li.included i {
+    color: #000000 !important;
+}
+
+.btn-rounded {
+    background-color: #000000 !important;
+    border-color: #000000 !important;
+}
+
+.btn-rounded:hover {
+    background-color: #333333 !important;
+    border-color: #333333 !important;
+}
+
+/* Additional navbar text selectors to ensure visibility */
+.navbar-dark .navbar-nav .nav-link {
+    color: #000000 !important;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    color: #000000 !important;
+}
+
+/* Additional navbar styles to ensure visibility */
+.search-icon,
+.search-icon i {
+    color: #000000 !important;
+}
+
+#custom-navbar .search-icon:hover {
+    color: #333333 !important;
+}
+
+.navbar a,
+.navbar-nav a,
+.navbar-collapse a,
+#navbarMain a {
+    color: #000000 !important;
+}
+
+.navbar .btn-login {
+    color: #000000 !important;
+    border-color: #000000 !important;
+}
+
+.navbar .btn-login:hover {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #000 !important;
+}
+
+/* Override any Bootstrap dark classes that might be used */
+.bg-dark {
+    background-color: #ffffff !important;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #000 !important;
+}
+
+.navbar-dark .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+.navbar-dark .navbar-toggler {
+    color: rgba(0,0,0,.55) !important;
+    border-color: rgba(0,0,0,.1) !important;
+}

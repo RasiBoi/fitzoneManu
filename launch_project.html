@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitZone Project Setup</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+        .step {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-left: 4px solid #007bff;
+        }
+        .step h3 {
+            margin-top: 0;
+            color: #007bff;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        .note {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        code {
+            background-color: #f0f0f0;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>FitZone Fitness Center Project Setup</h1>
+        
+        <div class="step">
+            <h3>Step 1: Make sure WAMP server is running</h3>
+            <p>Ensure that your WAMP server is running with both Apache and MySQL services active.</p>
+        </div>
+        
+        <div class="step">
+            <h3>Step 2: Set up the database</h3>
+            <p>Click the button below to set up the FitZone database:</p>
+            <a href="setup_database.php" class="btn">Setup Database</a>
+        </div>
+        
+        <div class="step">
+            <h3>Step 3: Access the website</h3>
+            <p>Once the database is set up, you can access the website:</p>
+            <a href="index.php" class="btn">Go to Homepage</a>
+        </div>
+        
+        <div class="note">
+            <p><strong>Default Admin Login:</strong></p>
+            <p>Username: <code>admin</code><br>Password: <code>admin123</code></p>
+        </div>
+        
+        <div class="note">
+            <p><strong>Website URL Configuration:</strong></p>
+            <p>If you're experiencing issues with broken links or missing resources, make sure the <code>SITE_URL</code> in <code>includes/config.php</code> matches your local environment.</p>
+            <p>Current setting: <code>http://localhost/WEBSITE/fitzone-main/</code></p>
+        </div>
+    </div>
+</body>
+</html>

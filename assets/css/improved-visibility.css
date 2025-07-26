@@ -1,0 +1,223 @@
+/**
+ * FitZone Fitness Center
+ * Improved Text Visibility for Black and White Theme
+ * This CSS addresses contrast issues in the black and white theme
+ */
+
+/* Hero Section Text Enhancement */
+.hero-subtitle {
+    color: #000000 !important;
+    font-weight: 700 !important;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.1) !important;
+}
+
+.hero-title {
+    color: #000000 !important;
+    font-weight: 800 !important;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.1) !important;
+}
+
+.hero-description {
+    color: #333333 !important;
+    font-weight: 500 !important;
+}
+
+/* Statistics Section on White Background */
+.trainer-stats-section {
+    background-color: transparent !important;
+}
+
+.stat-icon {
+    color: #000000 !important;
+    text-shadow: none !important;
+}
+
+.stat-number {
+    color: #000000 !important;
+    font-weight: 800 !important;
+    text-shadow: none !important;
+}
+
+.stat-label {
+    color: #000000 !important;
+    font-weight: 600 !important;
+    text-shadow: none !important;
+}
+
+/* Section Headings Enhancement */
+.section-subtitle {
+    color: #000000 !important;
+    font-weight: 700 !important;
+    letter-spacing: 2px !important;
+}
+
+.section-title {
+    color: #000000 !important;
+    font-weight: 800 !important;
+}
+
+.text-black {
+    color: #000000 !important;
+    font-weight: 800 !important;
+}
+
+.section-description {
+    color: #333333 !important;
+    font-weight: 500 !important;
+}
+
+/* About Section Text Enhancement for Dark Background */
+.about-section .section-subtitle {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    letter-spacing: 2px !important;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.5) !important;
+}
+
+.about-section .section-title {
+    color: #ffffff !important;
+    font-weight: 800 !important;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.5) !important;
+}
+
+.about-section .text-black {
+    color: #ffffff !important;
+    font-weight: 800 !important;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.5) !important;
+}
+
+.about-section .about-text {
+    color: #f0f0f0 !important;
+    font-weight: 500 !important;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Services Section Text Enhancement */
+.service-title {
+    color: #000000 !important;
+    font-weight: 700 !important;
+}
+
+.service-description {
+    color: #333333 !important;
+    font-weight: 500 !important;
+}
+
+.service-feature span {
+    color: #333333 !important;
+    font-weight: 500 !important;
+}
+
+.service-icon i {
+    color: #000000 !important;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Classes Section Text Enhancement */
+.class-title {
+    color: #000000 !important;
+    font-weight: 700 !important;
+}
+
+.class-trainer {
+    color: #333333 !important;
+    font-weight: 500 !important;
+}
+
+.class-description {
+    color: #333333 !important;
+    font-weight: 500 !important;
+}
+
+.class-schedule {
+    color: #000000 !important;
+    font-weight: 600 !important;
+}
+
+/* Membership Section Text Enhancement */
+.pricing-plan-title {
+    color: #000000 !important;
+    font-weight: 700 !important;
+}
+
+.pricing-plan-price {
+    color: #000000 !important;
+    font-weight: 800 !important;
+}
+
+.pricing-plan-feature {
+    color: #333333 !important;
+    font-weight: 500 !important;
+}
+
+/* Testimonials Section Text Enhancement */
+.testimonial-text {
+    color: #333333 !important;
+    font-weight: 500 !important;
+    font-style: italic !important;
+}
+
+.client-name {
+    color: #000000 !important;
+    font-weight: 700 !important;
+}
+
+.client-title {
+    color: #555555 !important;
+    font-weight: 500 !important;
+}
+
+/* Footer Text Enhancement */
+.footer h4, .footer h5 {
+    color: #000000 !important;
+    font-weight: 700 !important;
+}
+
+.footer p {
+    color: #333333 !important;
+    font-weight: 500 !important;
+}
+
+.footer a {
+    color: #000000 !important;
+    font-weight: 500 !important;
+}
+
+.footer a:hover {
+    color: #555555 !important;
+    text-decoration: underline !important;
+}
+
+/* Contact/CTA Section Text Enhancement */
+.contact-description {
+    color: #333333 !important;
+    font-weight: 500 !important;
+}
+
+.contact-info-text h5 {
+    color: #000000 !important;
+    font-weight: 700 !important;
+}
+
+.contact-info-text p {
+    color: #333333 !important;
+    font-weight: 500 !important;
+}
+
+/* General Button Enhancement */
+.btn-dark, .btn-primary {
+    background-color: #000000 !important;
+    border-color: #000000 !important;
+    color: #ffffff !important;
+    font-weight: 600 !important;
+}
+
+.btn-dark:hover, .btn-primary:hover {
+    background-color: #333333 !important;
+    border-color: #333333 !important;
+}
+
+/* Fix for stats section on white background */
+.counter-section {
+    background-color: transparent !important;
+}
