@@ -207,7 +207,7 @@ height: 70px;
 .topbar-title {
     font-size: 18px;
     font-weight: 600;
-    color: var(--text-primary); /* Ensuring text is white */
+    color: #f7931e; /* Ensuring text is white */
 }
 
 .topbar-right {

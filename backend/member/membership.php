@@ -303,67 +303,67 @@ $active_page = 'membership';
 <body>
     <div class="dashboard-container">
         <!-- Sidebar -->
-        <div class="sidebar" style="background-color: #fff; border-right: 1px solid #000;">
-            <div class="sidebar-header" style="border-bottom: 1px solid #000; padding: 20px;">
+        <div class="sidebar" style="background-color: #fff; border-right: 2px solid #f7931e;">
+            <div class="sidebar-header" style="border-bottom: 1px solid #f7931e; padding: 20px;">
                 <div class="sidebar-brand">
-                    <img src="../../assets/images/fitzone.png" alt="FitZone" style="height: 30px; filter: grayscale(100%);">
+                    <img src="../../assets/images/fitzone.png" alt="FitZone" style="height: 30px;">
                 </div>
             </div>
             
             <div class="sidebar-menu" style="padding-top: 15px;">
                 <ul style="list-style: none; padding: 0; margin: 0;">
                     <li>
-                        <a href="index.php" class="<?php echo $active_page === 'dashboard' ? 'active' : ''; ?>" style="display: flex; align-items: center; padding: 15px 20px; color: #000; text-decoration: none; border-left: 4px solid <?php echo $active_page === 'dashboard' ? '#000' : 'transparent'; ?>; background-color: <?php echo $active_page === 'dashboard' ? '#f0f0f0' : 'transparent'; ?>;">
-                            <span class="menu-icon" style="margin-right: 10px; width: 20px; text-align: center;"><i class="fas fa-tachometer-alt"></i></span>
+                        <a href="index.php" class="<?php echo $active_page === 'dashboard' ? 'active' : ''; ?>" style="display: flex; align-items: center; padding: 15px 20px; color: #000; text-decoration: none; border-left: 4px solid <?php echo $active_page === 'dashboard' ? '#f7931e' : 'transparent'; ?>; background-color: <?php echo $active_page === 'dashboard' ? 'rgba(247, 147, 30, 0.1)' : 'transparent'; ?>;">
+                            <span class="menu-icon" style="margin-right: 10px; width: 20px; text-align: center; color: <?php echo $active_page === 'dashboard' ? '#f7931e' : '#000'; ?>;"><i class="fas fa-tachometer-alt"></i></span>
                             <span style="font-weight: <?php echo $active_page === 'dashboard' ? 'bold' : 'normal'; ?>;">Dashboard</span>
                         </a>
                     </li>
                     
                     <li>
-                        <a href="profile.php" class="<?php echo $active_page === 'profile' ? 'active' : ''; ?>" style="display: flex; align-items: center; padding: 15px 20px; color: #000; text-decoration: none; border-left: 4px solid <?php echo $active_page === 'profile' ? '#000' : 'transparent'; ?>; background-color: <?php echo $active_page === 'profile' ? '#f0f0f0' : 'transparent'; ?>;">
-                            <span class="menu-icon" style="margin-right: 10px; width: 20px; text-align: center;"><i class="fas fa-user"></i></span>
+                        <a href="profile.php" class="<?php echo $active_page === 'profile' ? 'active' : ''; ?>" style="display: flex; align-items: center; padding: 15px 20px; color: #000; text-decoration: none; border-left: 4px solid <?php echo $active_page === 'profile' ? '#f7931e' : 'transparent'; ?>; background-color: <?php echo $active_page === 'profile' ? 'rgba(247, 147, 30, 0.1)' : 'transparent'; ?>;">
+                            <span class="menu-icon" style="margin-right: 10px; width: 20px; text-align: center; color: <?php echo $active_page === 'profile' ? '#f7931e' : '#000'; ?>;"><i class="fas fa-user"></i></span>
                             <span style="font-weight: <?php echo $active_page === 'profile' ? 'bold' : 'normal'; ?>;">My Profile</span>
                         </a>
                     </li>
                     
                     <li>
-                        <a href="membership.php" class="<?php echo $active_page === 'membership' ? 'active' : ''; ?>" style="display: flex; align-items: center; padding: 15px 20px; color: #000; text-decoration: none; border-left: 4px solid <?php echo $active_page === 'membership' ? '#000' : 'transparent'; ?>; background-color: <?php echo $active_page === 'membership' ? '#f0f0f0' : 'transparent'; ?>;">
-                            <span class="menu-icon" style="margin-right: 10px; width: 20px; text-align: center;"><i class="fas fa-id-card"></i></span>
+                        <a href="membership.php" class="<?php echo $active_page === 'membership' ? 'active' : ''; ?>" style="display: flex; align-items: center; padding: 15px 20px; color: #000; text-decoration: none; border-left: 4px solid <?php echo $active_page === 'membership' ? '#f7931e' : 'transparent'; ?>; background-color: <?php echo $active_page === 'membership' ? 'rgba(247, 147, 30, 0.1)' : 'transparent'; ?>;">
+                            <span class="menu-icon" style="margin-right: 10px; width: 20px; text-align: center; color: <?php echo $active_page === 'membership' ? '#f7931e' : '#000'; ?>;"><i class="fas fa-id-card"></i></span>
                             <span style="font-weight: <?php echo $active_page === 'membership' ? 'bold' : 'normal'; ?>;">My Membership</span>
                         </a>
                     </li>
                     
                     <li>
-                        <a href="classes.php" class="<?php echo $active_page === 'classes' ? 'active' : ''; ?>" style="display: flex; align-items: center; padding: 15px 20px; color: #000; text-decoration: none; border-left: 4px solid <?php echo $active_page === 'classes' ? '#000' : 'transparent'; ?>; background-color: <?php echo $active_page === 'classes' ? '#f0f0f0' : 'transparent'; ?>;">
-                            <span class="menu-icon" style="margin-right: 10px; width: 20px; text-align: center;"><i class="fas fa-dumbbell"></i></span>
+                        <a href="classes.php" class="<?php echo $active_page === 'classes' ? 'active' : ''; ?>" style="display: flex; align-items: center; padding: 15px 20px; color: #000; text-decoration: none; border-left: 4px solid <?php echo $active_page === 'classes' ? '#f7931e' : 'transparent'; ?>; background-color: <?php echo $active_page === 'classes' ? 'rgba(247, 147, 30, 0.1)' : 'transparent'; ?>;">
+                            <span class="menu-icon" style="margin-right: 10px; width: 20px; text-align: center; color: <?php echo $active_page === 'classes' ? '#f7931e' : '#000'; ?>;"><i class="fas fa-dumbbell"></i></span>
                             <span style="font-weight: <?php echo $active_page === 'classes' ? 'bold' : 'normal'; ?>;">Classes</span>
                         </a>
                     </li>
                     
                     <li>
-                        <a href="schedule.php" class="<?php echo $active_page === 'schedule' ? 'active' : ''; ?>" style="display: flex; align-items: center; padding: 15px 20px; color: #000; text-decoration: none; border-left: 4px solid <?php echo $active_page === 'schedule' ? '#000' : 'transparent'; ?>; background-color: <?php echo $active_page === 'schedule' ? '#f0f0f0' : 'transparent'; ?>;">
-                            <span class="menu-icon" style="margin-right: 10px; width: 20px; text-align: center;"><i class="fas fa-calendar-alt"></i></span>
+                        <a href="schedule.php" class="<?php echo $active_page === 'schedule' ? 'active' : ''; ?>" style="display: flex; align-items: center; padding: 15px 20px; color: #000; text-decoration: none; border-left: 4px solid <?php echo $active_page === 'schedule' ? '#f7931e' : 'transparent'; ?>; background-color: <?php echo $active_page === 'schedule' ? 'rgba(247, 147, 30, 0.1)' : 'transparent'; ?>;">
+                            <span class="menu-icon" style="margin-right: 10px; width: 20px; text-align: center; color: <?php echo $active_page === 'schedule' ? '#f7931e' : '#000'; ?>;"><i class="fas fa-calendar-alt"></i></span>
                             <span style="font-weight: <?php echo $active_page === 'schedule' ? 'bold' : 'normal'; ?>;">My Schedule</span>
                         </a>
                     </li>
                     
                     <li>
-                        <a href="progress.php" class="<?php echo $active_page === 'progress' ? 'active' : ''; ?>" style="display: flex; align-items: center; padding: 15px 20px; color: #000; text-decoration: none; border-left: 4px solid <?php echo $active_page === 'progress' ? '#000' : 'transparent'; ?>; background-color: <?php echo $active_page === 'progress' ? '#f0f0f0' : 'transparent'; ?>;">
-                            <span class="menu-icon" style="margin-right: 10px; width: 20px; text-align: center;"><i class="fas fa-chart-line"></i></span>
+                        <a href="progress.php" class="<?php echo $active_page === 'progress' ? 'active' : ''; ?>" style="display: flex; align-items: center; padding: 15px 20px; color: #000; text-decoration: none; border-left: 4px solid <?php echo $active_page === 'progress' ? '#f7931e' : 'transparent'; ?>; background-color: <?php echo $active_page === 'progress' ? 'rgba(247, 147, 30, 0.1)' : 'transparent'; ?>;">
+                            <span class="menu-icon" style="margin-right: 10px; width: 20px; text-align: center; color: <?php echo $active_page === 'progress' ? '#f7931e' : '#000'; ?>;"><i class="fas fa-chart-line"></i></span>
                             <span style="font-weight: <?php echo $active_page === 'progress' ? 'bold' : 'normal'; ?>;">My Progress</span>
                         </a>
                     </li>
                     
                     <li>
-                        <a href="nutrition.php" class="<?php echo $active_page === 'nutrition' ? 'active' : ''; ?>" style="display: flex; align-items: center; padding: 15px 20px; color: #000; text-decoration: none; border-left: 4px solid <?php echo $active_page === 'nutrition' ? '#000' : 'transparent'; ?>; background-color: <?php echo $active_page === 'nutrition' ? '#f0f0f0' : 'transparent'; ?>;">
-                            <span class="menu-icon" style="margin-right: 10px; width: 20px; text-align: center;"><i class="fas fa-utensils"></i></span>
+                        <a href="nutrition.php" class="<?php echo $active_page === 'nutrition' ? 'active' : ''; ?>" style="display: flex; align-items: center; padding: 15px 20px; color: #000; text-decoration: none; border-left: 4px solid <?php echo $active_page === 'nutrition' ? '#f7931e' : 'transparent'; ?>; background-color: <?php echo $active_page === 'nutrition' ? 'rgba(247, 147, 30, 0.1)' : 'transparent'; ?>;">
+                            <span class="menu-icon" style="margin-right: 10px; width: 20px; text-align: center; color: <?php echo $active_page === 'nutrition' ? '#f7931e' : '#000'; ?>;"><i class="fas fa-utensils"></i></span>
                             <span style="font-weight: <?php echo $active_page === 'nutrition' ? 'bold' : 'normal'; ?>;">Nutrition Plans</span>
                         </a>
                     </li>
                     
                     <li>
-                        <a href="messages.php" class="<?php echo $active_page === 'messages' ? 'active' : ''; ?>" style="display: flex; align-items: center; padding: 15px 20px; color: #000; text-decoration: none; border-left: 4px solid <?php echo $active_page === 'messages' ? '#000' : 'transparent'; ?>; background-color: <?php echo $active_page === 'messages' ? '#f0f0f0' : 'transparent'; ?>;">
-                            <span class="menu-icon" style="margin-right: 10px; width: 20px; text-align: center;"><i class="fas fa-envelope"></i></span>
+                        <a href="messages.php" class="<?php echo $active_page === 'messages' ? 'active' : ''; ?>" style="display: flex; align-items: center; padding: 15px 20px; color: #000; text-decoration: none; border-left: 4px solid <?php echo $active_page === 'messages' ? '#f7931e' : 'transparent'; ?>; background-color: <?php echo $active_page === 'messages' ? 'rgba(247, 147, 30, 0.1)' : 'transparent'; ?>;">
+                            <span class="menu-icon" style="margin-right: 10px; width: 20px; text-align: center; color: <?php echo $active_page === 'messages' ? '#f7931e' : '#000'; ?>;"><i class="fas fa-envelope"></i></span>
                             <span style="font-weight: <?php echo $active_page === 'messages' ? 'bold' : 'normal'; ?>;">Messages</span>
                         </a>
                     </li>
@@ -381,9 +381,9 @@ $active_page = 'membership';
         <!-- Main Content -->
         <div class="main-content">
             <!-- Top Navigation Bar -->
-            <div class="topbar" style="background-color: #fff; border-bottom: 1px solid #000; padding: 15px; margin-bottom: 20px;">
+            <div class="topbar" style="background-color: #fff; border-bottom: 1px solid #f7931e; padding: 15px; margin-bottom: 20px;">
                 <div class="d-flex align-items-center">
-                    <div class="toggle-sidebar me-3" style="color: #000; cursor: pointer;">
+                    <div class="toggle-sidebar me-3" style="color: #f7931e; cursor: pointer;">
                         <i class="fas fa-bars"></i>
                     </div>
                     <div class="topbar-title" style="color: #000; font-weight: 600; font-size: 1.2rem;">
@@ -411,7 +411,7 @@ $active_page = 'membership';
                 <!-- Page Header -->
                 <div class="page-header d-flex justify-content-between align-items-center">
                     <div>
-                        <h4>My Membership</h4>
+                        <h4 style="color: #f7931e; font-weight: bold;">My Membership</h4>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="index.php">Home</a></li>
@@ -422,28 +422,28 @@ $active_page = 'membership';
                 </div>
                 
                 <?php if ($success_message): ?>
-                <div class="alert fade show" role="alert" style="background-color: #f8f8f8; border: 1px solid #ddd; border-left: 4px solid #000; border-radius: 4px; padding: 15px; margin-bottom: 20px;">
-                    <i class="fas fa-check-circle me-2" style="color: #000;"></i> <span style="color: #333;"><?php echo $success_message; ?></span>
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" style="color: #000;"></button>
+                <div class="alert alert-success alert-dismissible fade show" role="alert" style="background-color: #fff; color: #000; border: 2px solid #f7931e;">
+                    <i class="fas fa-check-circle me-2" style="color: #f7931e;"></i> <?php echo $success_message; ?>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" style="background-color: #f7931e; opacity: 0.8;"></button>
                 </div>
                 <?php endif; ?>
                 
                 <?php if ($error_message): ?>
-                <div class="alert fade show" role="alert" style="background-color: #f8f8f8; border: 1px solid #ddd; border-left: 4px solid #666; border-radius: 4px; padding: 15px; margin-bottom: 20px;">
-                    <i class="fas fa-exclamation-circle me-2" style="color: #000;"></i> <span style="color: #333;"><?php echo $error_message; ?></span>
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" style="color: #000;"></button>
+                <div class="alert alert-danger alert-dismissible fade show" role="alert" style="background-color: #fff; color: #000; border: 2px solid #f7931e;">
+                    <i class="fas fa-exclamation-circle me-2" style="color: #f7931e;"></i> <?php echo $error_message; ?>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" style="background-color: #f7931e; opacity: 0.8;"></button>
                 </div>
                 <?php endif; ?>
                 
                 <!-- Tabs for Membership Navigation -->
                 <ul class="nav mb-4" id="membershipTab" role="tablist" style="border-bottom: 1px solid #ddd; margin-bottom: 20px; padding-bottom: 0;">
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link <?php echo $active_membership ? 'active' : ''; ?>" id="active-membership-tab" data-bs-toggle="tab" data-bs-target="#active-membership" type="button" role="tab" aria-controls="active-membership" aria-selected="<?php echo $active_membership ? 'true' : 'false'; ?>" style="border: none; border-bottom: 2px solid <?php echo $active_membership ? '#000' : 'transparent'; ?>; border-radius: 0; color: <?php echo $active_membership ? '#000' : '#666'; ?>; font-weight: <?php echo $active_membership ? '600' : 'normal'; ?>; padding: 10px 20px; margin-right: 5px; background: transparent;">
+                        <button class="nav-link <?php echo $active_membership ? 'active' : ''; ?>" id="active-membership-tab" data-bs-toggle="tab" data-bs-target="#active-membership" type="button" role="tab" aria-controls="active-membership" aria-selected="<?php echo $active_membership ? 'true' : 'false'; ?>" style="border: none; border-bottom: 2px solid <?php echo $active_membership ? '#f7931e' : 'transparent'; ?>; border-radius: 0; color: <?php echo $active_membership ? '#f7931e' : '#666'; ?>; font-weight: <?php echo $active_membership ? '600' : 'normal'; ?>; padding: 10px 20px; margin-right: 5px; background: transparent;">
                             <i class="fas fa-id-card me-2"></i>Active Membership
                         </button>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link <?php echo !$active_membership ? 'active' : ''; ?>" id="available-plans-tab" data-bs-toggle="tab" data-bs-target="#available-plans" type="button" role="tab" aria-controls="available-plans" aria-selected="<?php echo !$active_membership ? 'true' : 'false'; ?>" style="border: none; border-bottom: 2px solid <?php echo !$active_membership ? '#000' : 'transparent'; ?>; border-radius: 0; color: <?php echo !$active_membership ? '#000' : '#666'; ?>; font-weight: <?php echo !$active_membership ? '600' : 'normal'; ?>; padding: 10px 20px; margin-right: 5px; background: transparent;">
+                        <button class="nav-link <?php echo !$active_membership ? 'active' : ''; ?>" id="available-plans-tab" data-bs-toggle="tab" data-bs-target="#available-plans" type="button" role="tab" aria-controls="available-plans" aria-selected="<?php echo !$active_membership ? 'true' : 'false'; ?>" style="border: none; border-bottom: 2px solid <?php echo !$active_membership ? '#f7931e' : 'transparent'; ?>; border-radius: 0; color: <?php echo !$active_membership ? '#f7931e' : '#666'; ?>; font-weight: <?php echo !$active_membership ? '600' : 'normal'; ?>; padding: 10px 20px; margin-right: 5px; background: transparent;">
                             <i class="fas fa-list me-2"></i>Available Plans
                         </button>
                     </li>
@@ -462,14 +462,14 @@ $active_page = 'membership';
                                 <div class="row">
                                     <div class="col-md-8">
                                         <h5 style="font-weight: 600; color: #000; margin-bottom: 15px;">
-                                            <i class="fas fa-star me-2" style="color: #000;"></i>
+                                            <i class="fas fa-star me-2" style="color: #f7931e;"></i>
                                             <?php echo htmlspecialchars($active_membership['plan_name']); ?> Membership
                                         </h5>
                                         <p style="color: #333; margin-bottom: 15px;">
                                             <?php echo htmlspecialchars($active_membership['plan_description']); ?>
                                         </p>
                                         <div style="margin-bottom: 15px;">
-                                            <span style="background-color: #000; color: #fff; padding: 6px 12px; border-radius: 4px; display: inline-block; font-size: 14px;">
+                                            <span style="background-color: #f7931e; color: #fff; padding: 6px 12px; border-radius: 4px; display: inline-block; font-size: 14px;">
                                                 <i class="fas fa-check-circle me-1"></i> Active
                                             </span>
                                         </div>
@@ -482,7 +482,7 @@ $active_page = 'membership';
                                     <div class="col-md-4 text-md-end">
                                         <form method="post" onsubmit="return confirm('Are you sure you want to cancel your membership?');">
                                             <input type="hidden" name="subscription_id" value="<?php echo $active_membership['id']; ?>">
-                                            <button type="submit" name="cancel_membership" style="border: 1px solid #000; background-color: transparent; color: #000; padding: 8px 16px; border-radius: 4px; transition: all 0.3s;">
+                                            <button type="submit" name="cancel_membership" style="border: 1px solid #f7931e; background-color: transparent; color: #f7931e; padding: 8px 16px; border-radius: 4px; transition: all 0.3s;">
                                                 <i class="fas fa-times me-2"></i>Cancel Membership
                                             </button>
                                         </form>
@@ -530,7 +530,7 @@ $active_page = 'membership';
                                 <i class="fas fa-info-circle me-2"></i> You don't have an active membership. Check out our available plans and get started today!
                             </div>
                             <div class="text-center mb-4">
-                                <button class="btn btn-primary" data-bs-toggle="tab" data-bs-target="#available-plans">
+                                <button class="btn btn-primary" data-bs-toggle="tab" data-bs-target="#available-plans" style="background-color: #f7931e; border-color: #f7931e; color: #fff;">
                                     <i class="fas fa-id-card me-2"></i>View Available Plans
                                 </button>
                             </div>
@@ -584,8 +584,8 @@ $active_page = 'membership';
                                     foreach ($membership_plans as $index => $plan): 
                                 ?>
                                     <div class="col-md-4 mb-4">
-                                        <div class="card membership-card h-100 <?php echo $index === 0 ? 'selected' : ''; ?> plan-<?php echo strtolower($plan['name']); ?>" data-plan-id="<?php echo $plan['id']; ?>" style="border: 1px solid <?php echo $index === 0 ? '#000' : '#ddd'; ?>; border-radius: 8px; overflow: hidden; transition: all 0.3s; <?php echo $index === 0 ? 'box-shadow: 0 0 15px rgba(0,0,0,0.1);' : ''; ?>">
-                                            <div class="card-header text-center" style="background-color: <?php echo $index === 0 ? '#000' : '#f8f8f8'; ?>; border-bottom: 1px solid #ddd; padding: 15px;">
+                                        <div class="card membership-card h-100 <?php echo $index === 0 ? 'selected' : ''; ?> plan-<?php echo strtolower($plan['name']); ?>" data-plan-id="<?php echo $plan['id']; ?>" style="border: 1px solid <?php echo $index === 0 ? '#f7931e' : '#ddd'; ?>; border-radius: 8px; overflow: hidden; transition: all 0.3s; <?php echo $index === 0 ? 'box-shadow: 0 0 15px rgba(247,147,30,0.1);' : ''; ?>">
+                                            <div class="card-header text-center" style="background-color: <?php echo $index === 0 ? '#f7931e' : '#f8f8f8'; ?>; border-bottom: 1px solid #ddd; padding: 15px;">
                                                 <h4 class="membership-name" style="margin: 0; font-weight: 600; color: <?php echo $index === 0 ? '#fff' : '#000'; ?>;"><?php echo htmlspecialchars($plan['name']); ?></h4>
                                             </div>
                                             <div class="card-body" style="padding: 20px;">
@@ -601,13 +601,13 @@ $active_page = 'membership';
                                                 $features = explode('|', $plan['features']);
                                                 echo '<ul class="membership-features" style="list-style: none; padding-left: 0;">';
                                                 foreach ($features as $feature) {
-                                                    echo '<li style="margin-bottom: 10px; display: flex; align-items: flex-start;"><i class="fas fa-check" style="color: #000; margin-right: 10px; margin-top: 3px;"></i> <span style="color: #333;">' . htmlspecialchars($feature) . '</span></li>';
+                                                    echo '<li style="margin-bottom: 10px; display: flex; align-items: flex-start;"><i class="fas fa-check" style="color: #f7931e; margin-right: 10px; margin-top: 3px;"></i> <span style="color: #333;">' . htmlspecialchars($feature) . '</span></li>';
                                                 }
                                                 echo '</ul>';
                                                 ?>
                                                 
                                                 <div class="text-center mt-4">
-                                                    <button type="button" class="btn select-plan-btn" style="border: 1px solid #000; color: <?php echo $index === 0 ? '#fff' : '#000'; ?>; background-color: <?php echo $index === 0 ? '#000' : 'transparent'; ?>; padding: 8px 16px; transition: all 0.3s;">
+                                                    <button type="button" class="btn select-plan-btn" style="border: 1px solid #f7931e; color: <?php echo $index === 0 ? '#fff' : '#f7931e'; ?>; background-color: <?php echo $index === 0 ? '#f7931e' : 'transparent'; ?>; padding: 8px 16px; transition: all 0.3s;">
                                                         <i class="fas fa-check-circle me-2"></i><?php echo $index === 0 ? 'Selected' : 'Select Plan'; ?>
                                                     </button>
                                                 </div>
@@ -628,7 +628,7 @@ $active_page = 'membership';
                             
                             <!-- Purchase Button -->
                             <div class="text-center mt-4 mb-5">
-                                <button type="submit" name="purchase_membership" class="btn btn-lg" style="background-color: #000; color: #fff; padding: 12px 30px; border-radius: 4px; border: none; font-weight: 500; transition: all 0.3s; box-shadow: 0 2px 10px rgba(0,0,0,0.1); cursor: pointer;">
+                                <button type="submit" name="purchase_membership" class="btn btn-lg" style="background-color: #f7931e; color: #fff; padding: 12px 30px; border-radius: 4px; border: none; font-weight: 500; transition: all 0.3s; box-shadow: 0 2px 10px rgba(247,147,30,0.1); cursor: pointer;">
                                     <i class="fas fa-shopping-cart me-2"></i>Purchase Membership
                                 </button>
                             </div>
@@ -645,13 +645,13 @@ $active_page = 'membership';
                             <div class="table-responsive" style="margin-top: 20px;">
                                 <table class="table" style="border-collapse: separate; border-spacing: 0; width: 100%; border: 1px solid #ddd; border-radius: 5px; overflow: hidden;">
                                     <thead>
-                                        <tr style="background-color: #000; color: #fff;">
-                                            <th style="padding: 15px; border-bottom: 1px solid #333; font-weight: 500;">Plan</th>
-                                            <th style="padding: 15px; border-bottom: 1px solid #333; font-weight: 500;">Duration</th>
-                                            <th style="padding: 15px; border-bottom: 1px solid #333; font-weight: 500;">Start Date</th>
-                                            <th style="padding: 15px; border-bottom: 1px solid #333; font-weight: 500;">End Date</th>
-                                            <th style="padding: 15px; border-bottom: 1px solid #333; font-weight: 500;">Amount Paid</th>
-                                            <th style="padding: 15px; border-bottom: 1px solid #333; font-weight: 500;">Status</th>
+                                        <tr style="background-color: #f7931e; color: #fff;">
+                                            <th style="padding: 15px; border-bottom: 1px solid #f7931e; font-weight: 500;">Plan</th>
+                                            <th style="padding: 15px; border-bottom: 1px solid #f7931e; font-weight: 500;">Duration</th>
+                                            <th style="padding: 15px; border-bottom: 1px solid #f7931e; font-weight: 500;">Start Date</th>
+                                            <th style="padding: 15px; border-bottom: 1px solid #f7931e; font-weight: 500;">End Date</th>
+                                            <th style="padding: 15px; border-bottom: 1px solid #f7931e; font-weight: 500;">Amount Paid</th>
+                                            <th style="padding: 15px; border-bottom: 1px solid #f7931e; font-weight: 500;">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -664,7 +664,7 @@ $active_page = 'membership';
                                                 <td style="padding: 12px 15px; color: #333;">$<?php echo number_format($history['amount_paid'], 2); ?></td>
                                                 <td style="padding: 12px 15px;">
                                                     <?php if ($history['status'] === 'active' && strtotime($history['end_date']) >= time()): ?>
-                                                        <span style="background-color: #000; color: #fff; padding: 5px 10px; border-radius: 4px; font-size: 12px;">Active</span>
+                                                        <span style="background-color: #f7931e; color: #fff; padding: 5px 10px; border-radius: 4px; font-size: 12px;">Active</span>
                                                     <?php elseif ($history['status'] === 'cancelled'): ?>
                                                         <span style="background-color: #f8f8f8; color: #333; border: 1px solid #ddd; padding: 5px 10px; border-radius: 4px; font-size: 12px;">Cancelled</span>
                                                     <?php else: ?>
@@ -725,25 +725,25 @@ $active_page = 'membership';
                     const btn = c.querySelector('.select-plan-btn');
                     if (btn) {
                         btn.style.backgroundColor = 'transparent';
-                        btn.style.color = '#000';
+                        btn.style.color = '#f7931e';
                         btn.innerHTML = '<i class="fas fa-check-circle me-2"></i>Select Plan';
                     }
                 });
                 
                 // Add selected class to clicked card
                 this.classList.add('selected');
-                this.style.borderColor = '#000';
-                this.style.boxShadow = '0 0 15px rgba(0,0,0,0.1)';
+                this.style.borderColor = '#f7931e';
+                this.style.boxShadow = '0 0 15px rgba(247,147,30,0.1)';
                 const header = this.querySelector('.card-header');
                 if (header) {
-                    header.style.backgroundColor = '#000';
+                    header.style.backgroundColor = '#f7931e';
                     const title = header.querySelector('.membership-name');
                     if (title) title.style.color = '#fff';
                 }
                 
                 const selectBtn = this.querySelector('.select-plan-btn');
                 if (selectBtn) {
-                    selectBtn.style.backgroundColor = '#000';
+                    selectBtn.style.backgroundColor = '#f7931e';
                     selectBtn.style.color = '#fff';
                     selectBtn.innerHTML = '<i class="fas fa-check-circle me-2"></i>Selected';
                 }
@@ -769,8 +769,8 @@ $active_page = 'membership';
                     t.style.fontWeight = 'normal';
                 });
                 
-                this.style.borderBottom = '2px solid #000';
-                this.style.color = '#000';
+                this.style.borderBottom = '2px solid #f7931e';
+                this.style.color = '#f7931e';
                 this.style.fontWeight = '600';
             });
         });
@@ -797,19 +797,19 @@ $active_page = 'membership';
             // Set the first card as selected
             const firstCard = membershipCards[0];
             firstCard.classList.add('selected');
-            firstCard.style.borderColor = '#000';
-            firstCard.style.boxShadow = '0 0 15px rgba(0,0,0,0.1)';
+            firstCard.style.borderColor = '#f7931e';
+            firstCard.style.boxShadow = '0 0 15px rgba(247,147,30,0.1)';
             
             const header = firstCard.querySelector('.card-header');
             if (header) {
-                header.style.backgroundColor = '#000';
+                header.style.backgroundColor = '#f7931e';
                 const title = header.querySelector('.membership-name');
                 if (title) title.style.color = '#fff';
             }
             
             const selectBtn = firstCard.querySelector('.select-plan-btn');
             if (selectBtn) {
-                selectBtn.style.backgroundColor = '#000';
+                selectBtn.style.backgroundColor = '#f7931e';
                 selectBtn.style.color = '#fff';
                 selectBtn.innerHTML = '<i class="fas fa-check-circle me-2"></i>Selected';
             }
@@ -824,8 +824,8 @@ $active_page = 'membership';
         if (durationOptions.length > 0) {
             const firstOption = durationOptions[0];
             firstOption.classList.add('selected');
-            firstOption.style.backgroundColor = '#f8f8f8';
-            firstOption.style.borderColor = '#000';
+            firstOption.style.backgroundColor = 'rgba(247, 147, 30, 0.1)';
+            firstOption.style.borderColor = '#f7931e';
             if (durationInput) {
                 durationInput.value = firstOption.dataset.duration || 'monthly';
             }
@@ -842,8 +842,8 @@ $active_page = 'membership';
                 
                 // Add selected class and styling to clicked option
                 this.classList.add('selected');
-                this.style.backgroundColor = '#f8f8f8';
-                this.style.borderColor = '#000';
+                this.style.backgroundColor = 'rgba(247, 147, 30, 0.1)';
+                this.style.borderColor = '#f7931e';
                 
                 // Update hidden input with selected duration
                 const duration = this.dataset.duration;
@@ -900,24 +900,24 @@ $active_page = 'membership';
                     const selectBtn = c.querySelector('.select-plan-btn');
                     if (selectBtn) {
                         selectBtn.style.backgroundColor = 'transparent';
-                        selectBtn.style.color = '#000';
+                        selectBtn.style.color = '#f7931e';
                         selectBtn.innerHTML = '<i class="fas fa-check-circle me-2"></i>Select Plan';
                     }
                 });
                 
                 // Update selected card styling
                 card.classList.add('selected');
-                card.style.borderColor = '#000';
-                card.style.boxShadow = '0 0 15px rgba(0,0,0,0.1)';
+                card.style.borderColor = '#f7931e';
+                card.style.boxShadow = '0 0 15px rgba(247,147,30,0.1)';
                 const header = card.querySelector('.card-header');
                 if (header) {
-                    header.style.backgroundColor = '#000';
+                    header.style.backgroundColor = '#f7931e';
                     const title = header.querySelector('.membership-name');
                     if (title) title.style.color = '#fff';
                 }
                 
                 // Update button styling
-                this.style.backgroundColor = '#000';
+                this.style.backgroundColor = '#f7931e';
                 this.style.color = '#fff';
                 this.innerHTML = '<i class="fas fa-check-circle me-2"></i>Selected';
                 

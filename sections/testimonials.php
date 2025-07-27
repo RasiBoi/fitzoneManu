@@ -94,9 +94,11 @@ try {
 <!-- Initialize Swiper -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    // Apply grayscale to all client photos
+    // Remove any filters and overlays from client photos
     document.querySelectorAll('.client-photo img').forEach(function(img) {
-        img.style.filter = 'grayscale(100%)';
+        img.style.filter = 'none';
+        img.style.webkitFilter = 'none';
+        img.style.opacity = '1';
     });
     
     // Initialize Testimonial Slider with external navigation
@@ -180,7 +182,7 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 
 .testimonial-rating .fa-star.filled {
-    color: var(--primary);
+    color: #f7931e;
 }
 
 /* Testimonial Content */
@@ -201,8 +203,8 @@ document.addEventListener('DOMContentLoaded', function() {
     content: '\201C';
     font-size: 50px;
     line-height: 0;
-    color: var(--primary);
-    opacity: 0.3;
+    color: #f7931e;
+    opacity: 0.5;
     position: absolute;
     top: 10px;
     left: -15px;
@@ -221,7 +223,7 @@ document.addEventListener('DOMContentLoaded', function() {
     overflow: hidden;
     border-radius: 50%;
     margin-right: 15px;
-    border: 2px solid var(--primary);
+    border: 2px solid #f7931e;
     flex-shrink: 0; /* Don't shrink the photo */
 }
 
@@ -229,6 +231,8 @@ document.addEventListener('DOMContentLoaded', function() {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    filter: none !important;
+    -webkit-filter: none !important;
 }
 
 .client-info {
@@ -244,7 +248,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 .client-title {
     font-size: 14px;
-    color: var(--primary);
+    color: #f7931e;
     margin: 0;
 }
 
@@ -271,7 +275,7 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 
 .swiper-pagination-bullet-active {
-    background: var(--primary);
+    background: #f7931e;
 }
 
 /* Responsive styles */
@@ -349,7 +353,7 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 
 .testimonial-rating .filled {
-    color: #333;
+    color: #f7931e !important;
 }
 
 .testimonial-rating i:not(.filled) {
@@ -361,20 +365,22 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 
 .client-title {
-    color: #555;
+    color: #f7931e !important;
 }
 
 .client-photo img {
-    filter: grayscale(100%);
-    border: 2px solid #ddd;
+    filter: none !important;
+    -webkit-filter: none !important;
+    border: 2px solid #f7931e;
+    opacity: 1 !important;
 }
 
 .swiper-pagination-bullet {
-    background-color: #333;
+    background-color: rgba(247, 147, 30, 0.3);
 }
 
 .swiper-pagination-bullet-active {
-    background-color: #000;
+    background-color: #f7931e !important;
 }
 
 .testimonial-controls button {

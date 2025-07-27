@@ -263,66 +263,66 @@ $active_page = 'profile';
 <body class="role-member">
     <div class="dashboard-container">
         <!-- Sidebar -->
-        <div class="sidebar" style="background-color: #fff; border-right: 1px solid #000;">
-            <div class="sidebar-header" style="border-bottom: 1px solid #000; padding: 20px;">
+                        <div class="sidebar" style="background-color: #fff; border-right: 2px solid #f7931e;">
+            <div class="sidebar-header" style="border-bottom: 1px solid #f7931e; padding: 20px;">
                 <div class="sidebar-brand">
-                    <img src="../../assets/images/fitzone.png" alt="FitZone" style="height: 30px; filter: grayscale(100%);">
+                    <img src="../../assets/images/fitzone.png" alt="FitZone" style="height: 30px;">
                 </div>
             </div>
             
             <div class="sidebar-menu" style="padding-top: 15px;">
                 <ul style="list-style: none; padding: 0; margin: 0;">
                     <li>
-                        <a href="index.php" class="<?php echo $active_page === 'dashboard' ? 'active' : ''; ?>" style="display: flex; align-items: center; padding: 15px 20px; color: #000; text-decoration: none; border-left: 4px solid <?php echo $active_page === 'dashboard' ? '#000' : 'transparent'; ?>; background-color: <?php echo $active_page === 'dashboard' ? '#f0f0f0' : 'transparent'; ?>;">
+                        <a href="index.php" class="<?php echo $active_page === 'dashboard' ? 'active' : ''; ?>" style="display: flex; align-items: center; padding: 15px 20px; color: #000; text-decoration: none; border-left: 4px solid <?php echo $active_page === 'dashboard' ? '#f7931e' : 'transparent'; ?>; background-color: <?php echo $active_page === 'dashboard' ? 'rgba(247, 147, 30, 0.1)' : 'transparent'; ?>;">
                             <span class="menu-icon" style="margin-right: 10px; width: 20px; text-align: center;"><i class="fas fa-tachometer-alt"></i></span>
                             <span style="font-weight: <?php echo $active_page === 'dashboard' ? 'bold' : 'normal'; ?>;">Dashboard</span>
                         </a>
                     </li>
                     
                     <li>
-                        <a href="profile.php" class="<?php echo $active_page === 'profile' ? 'active' : ''; ?>" style="display: flex; align-items: center; padding: 15px 20px; color: #000; text-decoration: none; border-left: 4px solid <?php echo $active_page === 'profile' ? '#000' : 'transparent'; ?>; background-color: <?php echo $active_page === 'profile' ? '#f0f0f0' : 'transparent'; ?>;">
+                        <a href="profile.php" class="<?php echo $active_page === 'profile' ? 'active' : ''; ?>" style="display: flex; align-items: center; padding: 15px 20px; color: #000; text-decoration: none; border-left: 4px solid <?php echo $active_page === 'profile' ? '#f7931e' : 'transparent'; ?>; background-color: <?php echo $active_page === 'profile' ? 'rgba(247, 147, 30, 0.1)' : 'transparent'; ?>;">
                             <span class="menu-icon" style="margin-right: 10px; width: 20px; text-align: center;"><i class="fas fa-user"></i></span>
                             <span style="font-weight: <?php echo $active_page === 'profile' ? 'bold' : 'normal'; ?>;">My Profile</span>
                         </a>
                     </li>
                     
                     <li>
-                        <a href="membership.php" class="<?php echo $active_page === 'membership' ? 'active' : ''; ?>" style="display: flex; align-items: center; padding: 15px 20px; color: #000; text-decoration: none; border-left: 4px solid <?php echo $active_page === 'membership' ? '#000' : 'transparent'; ?>; background-color: <?php echo $active_page === 'membership' ? '#f0f0f0' : 'transparent'; ?>;">
+                        <a href="membership.php" class="<?php echo $active_page === 'membership' ? 'active' : ''; ?>" style="display: flex; align-items: center; padding: 15px 20px; color: #000; text-decoration: none; border-left: 4px solid <?php echo $active_page === 'membership' ? '#f7931e' : 'transparent'; ?>; background-color: <?php echo $active_page === 'membership' ? 'rgba(247, 147, 30, 0.1)' : 'transparent'; ?>;">
                             <span class="menu-icon" style="margin-right: 10px; width: 20px; text-align: center;"><i class="fas fa-id-card"></i></span>
                             <span style="font-weight: <?php echo $active_page === 'membership' ? 'bold' : 'normal'; ?>;">My Membership</span>
                         </a>
                     </li>
                     
                     <li>
-                        <a href="classes.php" class="<?php echo $active_page === 'classes' ? 'active' : ''; ?>" style="display: flex; align-items: center; padding: 15px 20px; color: #000; text-decoration: none; border-left: 4px solid <?php echo $active_page === 'classes' ? '#000' : 'transparent'; ?>; background-color: <?php echo $active_page === 'classes' ? '#f0f0f0' : 'transparent'; ?>;">
+                        <a href="classes.php" class="<?php echo $active_page === 'classes' ? 'active' : ''; ?>" style="display: flex; align-items: center; padding: 15px 20px; color: #000; text-decoration: none; border-left: 4px solid <?php echo $active_page === 'classes' ? '#f7931e' : 'transparent'; ?>; background-color: <?php echo $active_page === 'classes' ? 'rgba(247, 147, 30, 0.1)' : 'transparent'; ?>;">
                             <span class="menu-icon" style="margin-right: 10px; width: 20px; text-align: center;"><i class="fas fa-dumbbell"></i></span>
                             <span style="font-weight: <?php echo $active_page === 'classes' ? 'bold' : 'normal'; ?>;">Classes</span>
                         </a>
                     </li>
                     
                     <li>
-                        <a href="schedule.php" class="<?php echo $active_page === 'schedule' ? 'active' : ''; ?>" style="display: flex; align-items: center; padding: 15px 20px; color: #000; text-decoration: none; border-left: 4px solid <?php echo $active_page === 'schedule' ? '#000' : 'transparent'; ?>; background-color: <?php echo $active_page === 'schedule' ? '#f0f0f0' : 'transparent'; ?>;">
+                        <a href="schedule.php" class="<?php echo $active_page === 'schedule' ? 'active' : ''; ?>" style="display: flex; align-items: center; padding: 15px 20px; color: #000; text-decoration: none; border-left: 4px solid <?php echo $active_page === 'schedule' ? '#f7931e' : 'transparent'; ?>; background-color: <?php echo $active_page === 'schedule' ? 'rgba(247, 147, 30, 0.1)' : 'transparent'; ?>;">
                             <span class="menu-icon" style="margin-right: 10px; width: 20px; text-align: center;"><i class="fas fa-calendar-alt"></i></span>
                             <span style="font-weight: <?php echo $active_page === 'schedule' ? 'bold' : 'normal'; ?>;">My Schedule</span>
                         </a>
                     </li>
                     
                     <li>
-                        <a href="progress.php" class="<?php echo $active_page === 'progress' ? 'active' : ''; ?>" style="display: flex; align-items: center; padding: 15px 20px; color: #000; text-decoration: none; border-left: 4px solid <?php echo $active_page === 'progress' ? '#000' : 'transparent'; ?>; background-color: <?php echo $active_page === 'progress' ? '#f0f0f0' : 'transparent'; ?>;">
+                        <a href="progress.php" class="<?php echo $active_page === 'progress' ? 'active' : ''; ?>" style="display: flex; align-items: center; padding: 15px 20px; color: #000; text-decoration: none; border-left: 4px solid <?php echo $active_page === 'progress' ? '#f7931e' : 'transparent'; ?>; background-color: <?php echo $active_page === 'progress' ? 'rgba(247, 147, 30, 0.1)' : 'transparent'; ?>;">
                             <span class="menu-icon" style="margin-right: 10px; width: 20px; text-align: center;"><i class="fas fa-chart-line"></i></span>
                             <span style="font-weight: <?php echo $active_page === 'progress' ? 'bold' : 'normal'; ?>;">My Progress</span>
                         </a>
                     </li>
                     
                     <li>
-                        <a href="nutrition.php" class="<?php echo $active_page === 'nutrition' ? 'active' : ''; ?>" style="display: flex; align-items: center; padding: 15px 20px; color: #000; text-decoration: none; border-left: 4px solid <?php echo $active_page === 'nutrition' ? '#000' : 'transparent'; ?>; background-color: <?php echo $active_page === 'nutrition' ? '#f0f0f0' : 'transparent'; ?>;">
+                        <a href="nutrition.php" class="<?php echo $active_page === 'nutrition' ? 'active' : ''; ?>" style="display: flex; align-items: center; padding: 15px 20px; color: #000; text-decoration: none; border-left: 4px solid <?php echo $active_page === 'nutrition' ? '#f7931e' : 'transparent'; ?>; background-color: <?php echo $active_page === 'nutrition' ? 'rgba(247, 147, 30, 0.1)' : 'transparent'; ?>;">
                             <span class="menu-icon" style="margin-right: 10px; width: 20px; text-align: center;"><i class="fas fa-utensils"></i></span>
                             <span style="font-weight: <?php echo $active_page === 'nutrition' ? 'bold' : 'normal'; ?>;">Nutrition Plans</span>
                         </a>
                     </li>
                     
                     <li>
-                        <a href="messages.php" class="<?php echo $active_page === 'messages' ? 'active' : ''; ?>" style="display: flex; align-items: center; padding: 15px 20px; color: #000; text-decoration: none; border-left: 4px solid <?php echo $active_page === 'messages' ? '#000' : 'transparent'; ?>; background-color: <?php echo $active_page === 'messages' ? '#f0f0f0' : 'transparent'; ?>;">
+                        <a href="messages.php" class="<?php echo $active_page === 'messages' ? 'active' : ''; ?>" style="display: flex; align-items: center; padding: 15px 20px; color: #000; text-decoration: none; border-left: 4px solid <?php echo $active_page === 'messages' ? '#f7931e' : 'transparent'; ?>; background-color: <?php echo $active_page === 'messages' ? 'rgba(247, 147, 30, 0.1)' : 'transparent'; ?>;">
                             <span class="menu-icon" style="margin-right: 10px; width: 20px; text-align: center;"><i class="fas fa-envelope"></i></span>
                             <span style="font-weight: <?php echo $active_page === 'messages' ? 'bold' : 'normal'; ?>;">Messages</span>
                         </a>
@@ -339,28 +339,25 @@ $active_page = 'profile';
         </div>
         
         <!-- Main Content -->
+                <!-- Main Content -->
         <div class="main-content">
             <!-- Top Navigation Bar -->
-            <div class="topbar" style="background-color: #fff; border-bottom: 1px solid #000; padding: 15px; margin-bottom: 20px;">
+            <div class="topbar" style="background-color: #fff; border-bottom: 1px solid #f7931e; padding: 15px; margin-bottom: 20px;">
                 <div class="d-flex align-items-center">
-                    <div class="toggle-sidebar me-3" style="color: #000; cursor: pointer;">
+                    <div class="toggle-sidebar me-3" style="color: #f7931e; cursor: pointer;">
                         <i class="fas fa-bars"></i>
                     </div>
                     <div class="topbar-title" style="color: #000; font-weight: 600; font-size: 1.2rem;">
-                        My Profile
+                        <span style="color: #f7931e;">My Profile</span>
                     </div>
                 </div>
                 
                 <div class="topbar-right">
                     <div class="dropdown">
                         <div class="user-dropdown d-flex align-items-center" data-bs-toggle="dropdown" style="cursor: pointer;">
-                            <span class="username d-none d-sm-inline me-2" style="color: #000; font-weight: 500;"><?php echo htmlspecialchars($username); ?></span>
-                            <i class="fas fa-chevron-down small" style="color: #000;"></i>
                         </div>
                         
-                        <ul class="dropdown-menu dropdown-menu-end" style="background-color: #fff; border: 1px solid #000; border-radius: 0; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
-                            <li><a class="dropdown-item" href="profile.php" style="color: #000; padding: 10px 15px;"><i class="fas fa-user me-2"></i>My Profile</a></li>
-                            <li><a class="dropdown-item" href="../../logout.php" style="color: #000; padding: 10px 15px;"><i class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
+                        <ul class="dropdown-menu dropdown-menu-end" style="background-color: #fff; border: 1px solid #f7931e; border-radius: 8px; box-shadow: 0 2px 10px rgba(247, 147, 30, 0.1);">
                         </ul>
                     </div>
                 </div>
@@ -370,25 +367,23 @@ $active_page = 'profile';
             <div class="content">
                 <!-- Alert messages -->
                 <?php if (!empty($success_message)): ?>
-                <div class="alert alert-success alert-dismissible fade show" role="alert" style="background-color: #f0f0f0; color: #000; border-color: #000;">
-                    <i class="fas fa-check-circle me-2"></i> <?php echo $success_message; ?>
+                <div class="alert alert-success alert-dismissible fade show" role="alert" style="background-color: #fff; color: #000; border: 2px solid #f7931e;">
+                    <i class="fas fa-check-circle me-2" style="color: #f7931e;"></i> <?php echo $success_message; ?>
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
                 <?php endif; ?>
                 
                 <?php if (!empty($error_message)): ?>
-                <div class="alert alert-danger alert-dismissible fade show" role="alert" style="background-color: #f0f0f0; color: #000; border-color: #000;">
-                    <i class="fas fa-exclamation-circle me-2"></i> <?php echo $error_message; ?>
+                <div class="alert alert-danger alert-dismissible fade show" role="alert" style="background-color: #fff; color: #000; border: 2px solid #f7931e;">
+                    <i class="fas fa-exclamation-circle me-2" style="color: #f7931e;"></i> <?php echo $error_message; ?>
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
                 <?php endif; ?>
 
-                <div class="container-fluid px-4">
+                                <div class="container-fluid px-4">
                     <div class="d-flex justify-content-between align-items-center mb-4">
-                        <h4 class="mb-0">My Profile</h4>
+                        <h4 class="mb-0" style="color: #f7931e; font-weight: bold;">My Profile</h4>
                         <div>
-                            <a href="index.php" style="text-decoration: none; color: #000;">Home</a> / 
-                            <span style="color: #666;">My Profile</span>
                         </div>
                     </div>
                     
@@ -396,16 +391,16 @@ $active_page = 'profile';
                     <div class="row">
                         <!-- Profile Photo Card -->
                         <div class="col-md-4 mb-4">
-                            <div class="card" style="border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
-                                <div class="card-header" style="background-color: #fff; border-bottom: 1px solid #eee; padding: 15px 20px;">
-                                    <h5 class="mb-0" style="font-weight: 600; color: #000;">Profile Photo</h5>
+                            <div class="card" style="border: 2px solid #f7931e; border-radius: 8px; box-shadow: 0 4px 8px rgba(247, 147, 30, 0.1);">
+                                <div class="card-header" style="background-color: #fff; border-bottom: 1px solid #f7931e; padding: 15px 20px;">
+                                    <h5 class="mb-0" style="font-weight: 600; color: #f7931e;">Profile Photo</h5>
                                 </div>
                                 <div class="card-body text-center p-4">
-                                    <img src="<?php echo $profile_image_url; ?>" alt="Profile" id="profile-preview" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 1px solid #eee;">
+                                    <img src="<?php echo $profile_image_url; ?>" alt="Profile" id="profile-preview" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 3px solid #f7931e;">
                                     
                                     <div class="mt-4">
                                         <h5 style="font-weight: 600; color: #000;"><?php echo htmlspecialchars(isset($user['first_name']) ? $user['first_name'] : '') . ' ' . htmlspecialchars(isset($user['last_name']) ? $user['last_name'] : ''); ?></h5>
-                                        <span class="badge" style="background-color: #000; color: #fff; font-weight: normal; padding: 5px 10px; border-radius: 4px;">Member</span>
+                                        <span class="badge" style="background-color: #f7931e; color: #fff; font-weight: normal; padding: 5px 10px; border-radius: 4px;">Member</span>
                                     </div>
                                 </div>
                             </div>
@@ -413,17 +408,17 @@ $active_page = 'profile';
                         
                         <!-- Profile Information Card -->
                         <div class="col-md-8 mb-4">
-                            <div class="card" style="border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
-                                <div class="card-header" style="background-color: #fff; border-bottom: 1px solid #eee; padding: 15px 20px;">
-                                    <h5 class="mb-0" style="font-weight: 600; color: #000;">Profile Information</h5>
+                            <div class="card" style="border: 2px solid #f7931e; border-radius: 8px; box-shadow: 0 4px 8px rgba(247, 147, 30, 0.1);">
+                                <div class="card-header" style="background-color: #fff; border-bottom: 1px solid #f7931e; padding: 15px 20px;">
+                                    <h5 class="mb-0" style="font-weight: 600; color: #f7931e;">Profile Information</h5>
                                 </div>
                                 <div class="card-body p-4">
                                     <!-- Profile form -->
                                     <form method="post" action="" enctype="multipart/form-data">
                                         <!-- Profile image upload -->
                                         <div class="mb-3">
-                                            <label for="profile_image" class="form-label" style="font-weight: 500; color: #333;">Change Profile Photo</label>
-                                            <input type="file" class="form-control" id="profile_image" name="profile_image" accept="image/*" style="border: 1px solid #ddd; padding: 8px 12px;">
+                                            <label for="profile_image" class="form-label" style="font-weight: 500; color: #f7931e;">Change Profile Photo</label>
+                                            <input type="file" class="form-control" id="profile_image" name="profile_image" accept="image/*" style="border: 2px solid #f7931e; padding: 8px 12px;">
                                             <small class="form-text" style="color: #666;">Upload a new profile picture (JPG, PNG, or GIF).</small>
                                         </div>
                                         
@@ -485,7 +480,7 @@ $active_page = 'profile';
                                         
                                         <!-- Submit button -->
                                         <div class="mt-4">
-                                            <button type="submit" name="update_profile" class="btn" style="background-color: #28a745; border-color: #28a745; color: #fff; padding: 8px 16px;">
+                                            <button type="submit" name="update_profile" class="btn" style="background-color: #f7931e; border-color: #f7931e; color: #fff; padding: 8px 16px;">
                                                 <i class="fas fa-save me-2"></i> Save Changes
                                             </button>
                                         </div>
@@ -499,10 +494,10 @@ $active_page = 'profile';
                 <!-- Account Security -->
                 <div class="row">
                     <div class="col-md-12 mb-4">
-                        <div class="card" style="border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
-                            <div class="card-header d-flex justify-content-between align-items-center" style="background-color: #fff; border-bottom: 1px solid #eee; padding: 15px 20px;">
-                                <h5 class="mb-0" style="font-weight: 600; color: #000;">Account Security</h5>
-                                <a href="#" class="btn" style="border: 1px solid #000; color: #000; background-color: transparent; padding: 6px 12px; font-size: 14px;" data-bs-toggle="modal" data-bs-target="#changePasswordModal">
+                        <div class="card" style="border: 2px solid #f7931e; border-radius: 8px; box-shadow: 0 4px 8px rgba(247, 147, 30, 0.1);">
+                            <div class="card-header d-flex justify-content-between align-items-center" style="background-color: #fff; border-bottom: 1px solid #f7931e; padding: 15px 20px;">
+                                <h5 class="mb-0" style="font-weight: 600; color: #f7931e;">Account Security</h5>
+                                <a href="#" class="btn" style="border: 1px solid #f7931e; color: #f7931e; background-color: transparent; padding: 6px 12px; font-size: 14px; transition: all 0.3s;" data-bs-toggle="modal" data-bs-target="#changePasswordModal">
                                     <i class="fas fa-key me-1"></i> Change Password
                                 </a>
                             </div>
@@ -516,9 +511,9 @@ $active_page = 'profile';
     <!-- Change Password Modal -->
     <div class="modal fade" id="changePasswordModal" tabindex="-1" aria-labelledby="changePasswordModalLabel" aria-hidden="true">
         <div class="modal-dialog">
-            <div class="modal-content" style="background-color: #fff; color: #000; border-radius: 8px;">
-                <div class="modal-header" style="border-bottom: 1px solid #eee;">
-                    <h5 class="modal-title" id="changePasswordModalLabel" style="color: #000; font-weight: 600;">Change Password</h5>
+            <div class="modal-content" style="background-color: #fff; color: #000; border-radius: 8px; border: 2px solid #f7931e;">
+                <div class="modal-header" style="border-bottom: 1px solid #f7931e;">
+                    <h5 class="modal-title" id="changePasswordModalLabel" style="color: #f7931e; font-weight: 600;">Change Password</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <form method="post" action="">
@@ -536,9 +531,9 @@ $active_page = 'profile';
                             <input type="password" class="form-control" id="confirm_password" name="confirm_password" required style="border: 1px solid #ddd; padding: 8px 12px;">
                         </div>
                     </div>
-                    <div class="modal-footer" style="border-top: 1px solid #eee;">
-                        <button type="button" class="btn" style="border: 1px solid #000; color: #000; background-color: transparent;" data-bs-dismiss="modal">Cancel</button>
-                        <button type="submit" name="change_password" class="btn" style="background-color: #28a745; border-color: #28a745; color: #fff;">Change Password</button>
+                    <div class="modal-footer" style="border-top: 1px solid #f7931e;">
+                        <button type="button" class="btn" style="border: 1px solid #f7931e; color: #f7931e; background-color: transparent;" data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" name="change_password" class="btn" style="background-color: #f7931e; border-color: #f7931e; color: #fff;">Change Password</button>
                     </div>
                 </form>
             </div>

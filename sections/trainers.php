@@ -171,11 +171,12 @@ try {
     display: flex;
     flex-direction: column;
     transition: all 0.3s ease;
+    border-radius: 15px;
 }
 
 .trainer-card:hover .trainer-card-inner {
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-    border-color: #000000;
+    box-shadow: 0 15px 30px rgba(247, 147, 30, 0.2);
+    border-color: #f7931e;
 }
 
 /* Trainer Image */
@@ -192,6 +193,7 @@ try {
     height: 180px;
     margin: 0 auto;
     overflow: hidden;
+    border-radius: 12px;
 }
 
 .trainer-image {
@@ -200,12 +202,13 @@ try {
     object-fit: cover;
     position: relative;
     z-index: 2;
-    filter: grayscale(100%);
+    filter: none;
     transition: all 0.4s ease;
 }
 
 .trainer-card:hover .trainer-image {
-    filter: grayscale(0%);
+    transform: scale(1.05);
+    filter: none !important;
 }
 
 /* Trainer Content */
@@ -226,7 +229,7 @@ try {
     transform: translateX(-50%);
     width: 50px;
     height: 2px;
-    background-color: #000000;
+    background-color: #f7931e;
 }
 
 .trainer-name {
@@ -238,14 +241,16 @@ try {
 }
 
 .trainer-specialization {
-    color: #000000;
+    color: #ffffff;
     font-size: 16px;
     font-weight: 600;
     margin-bottom: 8px;
     display: inline-block;
     padding: 5px 15px;
-    background: rgba(0, 0, 0, 0.05);
-    border: 1px solid #000000;
+    background: #f7931e;
+    border: none;
+    box-shadow: 0 2px 4px rgba(247, 147, 30, 0.2);
+    border-radius: 8px;
 }
 
 /* Experience now below specialization */
@@ -253,7 +258,7 @@ try {
     font-size: 14px;
     font-weight: 500;
     margin-bottom: 15px;
-    color: #000000;
+    color: #f7931e;
     display: block;
 }
 

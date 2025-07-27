@@ -12,13 +12,15 @@ $currentYear = date('Y');
         </main> <!-- End of main content -->
 
         <!-- Footer -->
-        <footer class="footer bg-light text-dark mt-5 pt-5">
+        <footer class="footer bg-light text-dark mt-5 pt-5" style="border-top: 4px solid #000;">
             <div class="container">
                 <div class="row">
                     <!-- About Column -->
                     <div class="col-lg-4 mb-4">
-                        <h4 class="mb-3" style="color: #000000; font-weight: bold;">About</h4>
-                        <img src="<?php echo SITE_URL; ?>assets/images/fitzone.png" alt="FitZone" height="20" class="mb-3" style="filter: grayscale(100%);">
+                        <h4 class="mb-3" style="color: #f7931e; font-weight: bold;">About</h4>
+                        <div class="footer-logo mb-3">
+                            <span class="logo-fit">Fit</span><span class="logo-zone" style="color: #f7931e;">Zone</span>
+                        </div>
                         <p class="text-dark">
                             FitZone is Kurunegala's premier fitness center, offering state-of-the-art equipment, guidance from expert trainers, and a diverse range of fitness programs—all designed to help you achieve your health and wellness goals.
                         </p>
@@ -33,7 +35,7 @@ $currentYear = date('Y');
                     
                     <!-- Quick Links Column - Added padding-left for more right alignment -->
                     <div class="col-lg-4 col-md-6 mb-4" style="padding-left: 140px;">
-                        <h5 class="mb-3" style="color: #000000; font-weight: bold;">Quick Links</h5>
+                        <h5 class="mb-3" style="color: #f7931e; font-weight: bold;">Quick Links</h5>
                         <ul class="list-unstyled">
                             <li class="mb-2"><a href="<?php echo SITE_URL; ?>" class="text-decoration-none text-dark">Home</a></li>
                             <li class="mb-2"><a href="<?php echo SITE_URL; ?>about.php" class="text-decoration-none text-dark">About Us</a></li>
@@ -47,14 +49,14 @@ $currentYear = date('Y');
                     
                     <!-- Contact Info Column -->
                     <div class="col-lg-4 mb-4">
-                        <h5 class="mb-3" style="color: #000000; font-weight: bold;">Contact Info</h5>
+                        <h5 class="mb-3" style="color: #f7931e; font-weight: bold;">Contact Info</h5>
                         <ul class="list-unstyled footer-contact">
                             <li class="d-flex mb-3">
-                                <i class="fas fa-map-marker-alt mt-1 me-3" style="color: #000000;"></i>
+                                <i class="fas fa-map-marker-alt mt-1 me-3" style="color: #f7931e;"></i>
                                 <span>No. 123, Main Street,<br>Kurunegala, Sri Lanka</span>
                             </li>
                             <li class="d-flex mb-3">
-                                <i class="fas fa-phone-alt mt-1 me-3" style="color: #000000;"></i>
+                                <i class="fas fa-phone-alt mt-1 me-3" style="color: #f7931e;"></i>
                                 <span>+94 76 123 4567</span>
                             </li>
                             <li class="d-flex mb-3">
@@ -82,43 +84,126 @@ $currentYear = date('Y');
             </div>
             
             <style>
-                /* Black and White Theme for Footer */
+                /* Footer Theme with Orange Accents */
                 .footer {
                     background-color: #f8f8f8 !important;
                     color: #000 !important;
-                    border-top: 1px solid #ddd;
+                    position: relative;
+                }
+                
+                .footer::before {
+                    content: '';
+                    position: absolute;
+                    top: -4px;
+                    left: 0;
+                    right: 0;
+                    height: 4px;
+                    background-color: #000;
                 }
                 
                 .footer a {
                     color: #333 !important;
-                    transition: color 0.3s ease;
+                    transition: all 0.3s ease;
                 }
                 
                 .footer a:hover {
-                    color: #000 !important;
-                    text-decoration: underline !important;
+                    color: #f7931e !important;
+                    text-decoration: none !important;
+                }
+                
+                .footer h4, .footer h5 {
+                    color: #f7931e !important;
+                    font-weight: bold !important;
                 }
                 
                 .social-links a {
-                    background-color: transparent;
-                    border: 1px solid #ddd;
-                    color: #000 !important;
+                    background-color: transparent !important;
+                    border: 1px solid #f7931e !important;
+                    color: #f7931e !important;
+                    width: 36px !important;
+                    height: 36px !important;
+                    display: inline-flex !important;
+                    align-items: center !important;
+                    justify-content: center !important;
+                    border-radius: 50% !important;
+                    margin-right: 10px !important;
+                    transition: all 0.3s ease !important;
                 }
                 
                 .social-links a:hover {
-                    background-color: #f0f0f0;
+                    background-color: #f7931e !important;
+                    color: #fff !important;
+                    transform: translateY(-3px);
                 }
                 
-                .footer img {
-                    filter: grayscale(100%);
+                .footer .contact-detail-item i {
+                    color: #f7931e !important;
+                }
+                
+                .footer .footer-logo {
+                    font-size: 24px;
+                    font-weight: bold;
+                    letter-spacing: 0.5px;
+                }
+
+                .footer .logo-fit {
+                    color: #000;
+                }
+
+                .footer .logo-zone {
+                    color: #f7931e;
+                }
+
+                .footer .contact-info h4 {
+                    font-weight: 600 !important;
+                    margin-bottom: 5px !important;
+                    color: #000 !important;
+                }
+
+                .footer .contact-info p {
+                    color: #333 !important;
+                    margin-bottom: 0 !important;
+                }
+
+                .footer hr {
+                    border-color: #f7931e !important;
+                    opacity: 0.1;
+                }
+
+                .footer .bottom-footer {
+                    color: #333 !important;
+                }
+
+                .footer .bottom-footer p {
+                    color: #333 !important;
                 }
             </style>
         </footer>
         
         <!-- Back to Top Button -->
-        <button id="back-to-top" class="btn rounded-circle bg-dark text-white">
+        <button id="back-to-top" class="btn rounded-circle" style="background-color: #f7931e; color: #fff;">
             <i class="fas fa-arrow-up"></i>
         </button>
+        
+        <style>
+        #back-to-top {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            display: none;
+            z-index: 999;
+            transition: all 0.3s ease;
+        }
+        
+        #back-to-top:hover {
+            transform: translateY(-5px);
+            background-color: #e07d0f !important;
+        }
+        
+        #back-to-top.show {
+            display: block;
+        }
+        </style>
         
         <!-- Bootstrap Bundle with Popper -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>

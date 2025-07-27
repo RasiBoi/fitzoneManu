@@ -21,6 +21,12 @@ if (session_status() === PHP_SESSION_NONE) {
 // Set current page for active menu highlighting
 $current_page = 'login.php';
 
+// Handle pending redirect after showing success message
+if (isset($_SESSION['pending_redirect'])) {
+    $redirect_url = $_SESSION['pending_redirect'];
+    unset($_SESSION['pending_redirect']);
+}
+
 // Store redirect URL if provided
 $redirect_to = '';
 if (isset($_GET['redirect_to'])) {
@@ -159,24 +165,24 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             // Set success message
             setFlashMessage('success', 'Login successful! Welcome back.');
             
-            // Check if there's a redirect URL to use after login
+            // Store the redirect URL in session
+            $_SESSION['pending_redirect'] = !empty($redirect_to) ? $redirect_to : (
+                $user['role'] === 'admin' ? 'backend/admin/index.php' : (
+                    $user['role'] === 'trainer' ? 'backend/trainer/index.php' : 'backend/member/index.php'
+                )
+            );
+            
+            // Clear the previous redirect session variable
             if (!empty($redirect_to)) {
-                // Clear the redirect session variable 
                 unset($_SESSION['redirect_after_login']);
-                redirect($redirect_to);
-            } else {
-                // Redirect based on user role
-                if ($user['role'] === 'admin') {
-                    redirect('backend/admin/index.php');
-                } elseif ($user['role'] === 'trainer') {
-                    redirect('backend/trainer/index.php');
-                } else {
-                    redirect('backend/member/index.php');
-                }
+            }
+
+            // Instead of redirecting immediately, return to the page to show the message
+            $success = 'success';
             }
         }
     }
-}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -223,38 +229,63 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         
         .card {
             background-color: #ffffff;
-            border: 1px solid #000000;
-            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(221, 221, 221, 0.5);
+            box-shadow: 
+                0 10px 20px rgba(0, 0, 0, 0.12),
+                0 5px 8px rgba(0, 0, 0, 0.06),
+                inset 0 -5px 8px rgba(0, 0, 0, 0.02);
+            border-radius: 15px;
+            overflow: hidden;
+            transform: perspective(1000px) translateZ(0);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        .card:hover {
+            transform: perspective(1000px) translateZ(10px);
+            box-shadow: 
+                0 15px 30px rgba(0, 0, 0, 0.15),
+                0 8px 12px rgba(0, 0, 0, 0.08),
+                inset 0 -8px 12px rgba(0, 0, 0, 0.03);
         }
         
         .card-body {
             color: #000000;
+            border-radius: 15px;
+            background: linear-gradient(145deg, #ffffff, #f8f9fa);
         }
         
         .form-label {
             color: #000000;
-            font-weight: 500;
+            font-weight: 600;
             margin-bottom: 0.5rem;
         }
         
         .input-group-text {
-            background-color: #f8f8f8;
-            border: 1px solid #000000;
-            color: #000000;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            color: #f7931e;
+            border-radius: 8px 0 0 8px;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+            transform: translateZ(0);
         }
         
         .form-control {
             background-color: #ffffff;
-            border: 1px solid #000000;
+            border: 1px solid #ddd;
             color: #000000;
             padding: 0.75rem 1rem;
             height: auto;
             transition: all 0.3s ease;
+            border-radius: 0 8px 8px 0;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+            transform: translateZ(0);
         }
         
         .form-control:focus {
             background-color: #ffffff;
-            box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
+            border-color: #f7931e;
+            box-shadow: 0 0 0 0.2rem rgba(247, 147, 30, 0.25);
             color: #000000;
         }
         
@@ -268,19 +299,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         
         /* Button styling */
         .btn-primary {
-            background: #000000;
-            border: 1px solid #000000;
-            padding: 0.75rem 1.5rem;
-            font-weight: 500;
-            letter-spacing: 0.5px;
+            background-color: #f7931e;
+            border-color: #f7931e;
+            color: #fff;
+            padding: 0.75rem 2rem;
+            font-weight: 600;
             transition: all 0.3s ease;
-        }
-        
-        .btn-primary:hover, 
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(247, 147, 30, 0.2);
+            transform: translateZ(0);
+        }        .btn-primary:hover, 
         .btn-primary:focus {
-            background: #333333;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            transform: translateY(-2px);
+            background: #e07d0f !important;
+            box-shadow: 
+                0 8px 15px rgba(247, 147, 30, 0.3),
+                0 4px 6px rgba(247, 147, 30, 0.2);
+            transform: translateY(-2px) translateZ(10px);
         }
         
         .btn-outline-secondary {
@@ -296,66 +330,102 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
         
         #togglePassword {
-            background-color: #f8f8f8;
-            color: #000000;
-            border: 1px solid #000000;
+            background-color: #fff;
+            color: #f7931e;
+            border: 1px solid #ddd;
             padding: 0.75rem 1rem;
+            transition: all 0.3s ease;
         }
         
         #togglePassword:hover,
         #togglePassword:focus {
-            color: #000000;
-            background-color: #f0f0f0;
+            color: #e07d0f;
+            background-color: rgba(247, 147, 30, 0.1);
+            border-color: #f7931e;
         }
         
-        .header-popup {
-            position: fixed;
-            top: 60px; /* Position it right under the Back to Home button */
-            right: 15px;
-            min-width: 280px;
-            max-width: 350px;
-            padding: 12px 15px;
-            border-radius: 4px;
-            display: flex;
-            align-items: center;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            transform: translateY(-20px);
-            opacity: 0;
-            transition: all 0.4s ease;
-            z-index: 9;
+        #header-popup-container {
+            position: fixed !important;
+            top: 20px !important;
+            right: 20px !important;
+            z-index: 99999 !important;
+            pointer-events: none !important;
+        }
+
+        #header-popup-container .header-popup {
+            position: relative !important;
+            min-width: 300px !important;
+            max-width: 380px !important;
+            padding: 16px 20px !important;
+            border-radius: 12px !important;
+            display: flex !important;
+            align-items: center !important;
+            box-shadow: 
+                0 8px 16px rgba(0, 0, 0, 0.15),
+                0 3px 6px rgba(0, 0, 0, 0.1) !important;
+            transform: translateY(-20px) translateZ(0) !important;
+            opacity: 0 !important;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+            pointer-events: auto !important;
+            margin-bottom: 10px !important;
         }
         
-        .header-popup.show {
-            opacity: 1;
-            transform: translateY(0);
+        #header-popup-container .header-popup.show {
+            opacity: 1 !important;
+            transform: translateY(0) translateZ(0) !important;
         }
         
-        .header-popup.success {
-            background-color: #ffffff;
-            color: #000000;
-            border: 2px solid #000000;
+        #header-popup-container .header-popup.success {
+            background: #ffffff !important;
+            color: #000000 !important;
+            border: 2px solid #f7931e !important;
+            box-shadow: 
+                0 8px 16px rgba(247, 147, 30, 0.1),
+                0 3px 6px rgba(247, 147, 30, 0.05) !important;
         }
         
-        .header-popup.error {
-            background-color: #ffffff;
-            color: #000000;
-            border: 2px solid #000000;
+        #header-popup-container .header-popup.error {
+            background: #ffffff !important;
+            color: #000000 !important;
+            border: 2px solid #f7931e !important;
+            box-shadow: 
+                0 8px 16px rgba(247, 147, 30, 0.1),
+                0 3px 6px rgba(247, 147, 30, 0.05) !important;
         }
         
-        .header-popup-icon {
-            margin-right: 10px;
+        #header-popup-container .header-popup .fas {
+            font-size: 20px !important;
+            width: 24px !important;
+            height: 24px !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            color: #f7931e !important;
         }
         
-        .header-popup-message {
-            font-size: 14px;
+        #header-popup-container .header-popup-icon {
+            margin-right: 15px !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            width: 32px !important;
+            height: 32px !important;
+            background: rgba(247, 147, 30, 0.1) !important;
+            border-radius: 50% !important;
+            flex-shrink: 0 !important;
+            box-shadow: 0 2px 4px rgba(247, 147, 30, 0.1) !important;
+        }
+        
+        #header-popup-container .header-popup-message {
+            font-size: 15px !important;
+            font-weight: 500 !important;
+            line-height: 1.5 !important;
+            letter-spacing: 0.2px !important;
+            color: #000000 !important;
         }
     </style>
 </head>
 <body>
-
-<a href="index.php" class="btn btn-dark position-absolute" style="top: 15px; right: 15px; z-index: 10;">
-    <i class="fas fa-home me-1"></i> Back to Home
-</a>
 
 <div id="header-popup-container">
     <!-- Popup notifications will be inserted here via JavaScript -->
@@ -366,8 +436,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="card-body p-4 p-md-5 position-relative">
             
             <div class="text-center mb-4">
-                <img src="<?php echo SITE_URL; ?>assets/images/fitzone.png" alt="FitZone" class="mb-3" style="height: 45px; filter: grayscale(100%);">
-                <h3 class="card-title mb-1">Welcome Back</h3>
+                <div class="logo-container mb-3">
+                    <span style="font-size: 32px; font-weight: bold;">
+                        <span style="color: #000;">Fit</span><span style="color: #f7931e;">Zone</span>
+                    </span>
+                </div>
+                <h3 class="card-title mb-1" style="color: #000;">Welcome Back</h3>
                 <p class="text-muted">Sign in to your account</p>
             </div>
             
@@ -382,10 +456,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 </div>
                 
                 <div class="mb-4">
-                    <div class="d-flex justify-content-between align-items-center mb-2">
-                        <label for="password" class="form-label mb-0">Password</label>
-                        <a href="login.php" class="text-black small">Forgot Password?</a>
-                    </div>
+                    <label for="password" class="form-label">Password</label>
                     <div class="input-group">
                         <span class="input-group-text"><i class="fas fa-lock"></i></span>
                         <input type="password" class="form-control" id="password" name="password" 
@@ -393,6 +464,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <button class="btn btn-outline-secondary" type="button" id="togglePassword">
                             <i class="fas fa-eye"></i>
                         </button>
+                    </div>
+                    <div class="mt-2 text-end">
+                        <a href="login.php" class="small" style="color: #000000ff; text-decoration: none; transition: all 0.3s ease;">Forgot Password?</a>
                     </div>
                 </div>
                 
@@ -406,15 +480,23 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 </div>
                 
                 <div class="d-grid mb-4">
-                    <button type="submit" class="btn btn-dark py-2">
+                    <button type="submit" class="btn btn-primary py-2">
                         <i class="fas fa-sign-in-alt me-2"></i> Sign In
                     </button>
                 </div>
                 
                 <div class="text-center">
-                    <p class="mb-0">Don't have an account? <a href="signup.php" class="text-black fw-bold">Sign Up</a></p>
+                    <p class="mb-0">Don't have an account? <a href="signup.php" class="fw-bold" style="color: #f7931e; text-decoration: none;">Sign Up</a></p>
                 </div>
             </form>
+            
+            <hr class="my-4">
+            
+            <div class="text-center">
+                <a href="index.php" class="btn btn-link" style="color: #000000ff; text-decoration: none; font-weight: 500;">
+                    <i class="fas fa-home me-1"></i> Back to Home
+                </a>
+            </div>
         </div>
     </div>
 </div>
@@ -477,15 +559,27 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(() => {
             popup.classList.add('show');
             
-            // Auto-hide after 5 seconds
-            setTimeout(() => {
-                popup.classList.remove('show');
-                
-                // Remove from DOM after animation completes
+            <?php if (isset($_SESSION['pending_redirect'])): ?>
+            // If this is a success message and we have a pending redirect
+            if (type === 'success') {
+                // Wait for 1 second to show the message before redirecting
                 setTimeout(() => {
-                    container.removeChild(popup);
-                }, 500);
-            }, 5000);
+                    window.location.href = '<?php echo isset($_SESSION['pending_redirect']) ? $_SESSION['pending_redirect'] : ''; ?>';
+                }, 1000);
+            }
+            <?php endif; ?>
+
+            // Auto-hide after 5 seconds (only for non-redirect messages)
+            if (type !== 'success' || !<?php echo isset($_SESSION['pending_redirect']) ? 'true' : 'false'; ?>) {
+                setTimeout(() => {
+                    popup.classList.remove('show');
+                    
+                    // Remove from DOM after animation completes
+                    setTimeout(() => {
+                        container.removeChild(popup);
+                    }, 500);
+                }, 5000);
+            }
         }, 100);
     }
 });

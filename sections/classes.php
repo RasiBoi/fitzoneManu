@@ -97,10 +97,8 @@ error_log("Processing " . count($featured_classes) . " classes for display");
                                     <div class="class-duration">
                                         <i class="far fa-clock"></i> <?php echo $class['duration']; ?>
                                     </div>
-                                    <div class="class-overlay">
-                                        <div class="class-difficulty <?php echo strtolower($class['difficulty']); ?>">
-                                            <?php echo $class['difficulty']; ?>
-                                        </div>
+                                    <div class="class-difficulty <?php echo strtolower($class['difficulty']); ?>">
+                                        <?php echo $class['difficulty']; ?>
                                     </div>
                                 </div>
                                 <div class="class-content">
@@ -169,12 +167,13 @@ error_log("Processing " . count($featured_classes) . " classes for display");
         width: 100%;
         height: 200px;
         object-fit: cover;
-        transition: transform 0.5s ease, filter 0.5s ease;
-        filter: grayscale(100%);
+        transition: transform 0.5s ease;
+        filter: none !important;
     }
 
     .class-card:hover .class-image img {
         transform: scale(1.05);
+        filter: none !important;
     }
 
     .class-content {
@@ -215,43 +214,36 @@ error_log("Processing " . count($featured_classes) . " classes for display");
         position: absolute;
         top: 10px;
         right: 10px;
-        padding: 5px 10px;
+        padding: 6px 12px;
         font-size: 12px;
         font-weight: 600;
         border-radius: 4px;
-        background-color: rgba(0, 0, 0, 0.7);
+        background-color: #f7931e;
         color: #ffffff;
+        z-index: 2;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
     }
 
     .class-duration {
         position: absolute;
         bottom: 10px;
         left: 10px;
-        padding: 5px 10px;
+        padding: 6px 12px;
         font-size: 12px;
         border-radius: 4px;
-        background-color: rgba(0, 0, 0, 0.7);
+        background-color: #f7931e;
         color: #ffffff;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        gap: 5px;
     }
 
-    .beginner {
-        background-color: #000000;
-        border: 1px solid white;
-    }
-
-    .intermediate {
-        background-color: #000000;
-        border: 1px solid white;
-    }
-
-    .advanced {
-        background-color: #000000;
-        border: 1px solid white;
-    }
-
-    .all {
-        background-color: #000000;
-        border: 1px solid white;
+    .beginner, .intermediate, .advanced, .all {
+        background-color: #f7931e;
+        border: none;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     }
 
     @media (max-width: 991.98px) {

@@ -103,9 +103,12 @@ $stats = [
 
 .stat-icon {
     font-size: 28px;
-    color: #000000;
     margin-bottom: 15px;
     text-shadow: none;
+}
+
+.stat-icon i {
+    color: #f7931e !important;
 }
 
 .stat-number {

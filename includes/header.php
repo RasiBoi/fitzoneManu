@@ -46,7 +46,93 @@ if (!isset($current_page)) {
     
     <!-- Inline styles for navbar visibility -->
     <style>
-        /* Force navbar text to be black */
+        /* Enhanced navbar styling */
+        #custom-navbar {
+            padding: 0.5rem 1rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1) !important;
+            transition: all 0.3s ease;
+        }
+
+        /* Navigation link styling */
+        #custom-navbar .nav-link {
+            position: relative;
+            padding: 0.5rem 1rem;
+            transition: all 0.3s ease;
+            color: #000000 !important;
+            font-weight: 600 !important;
+        }
+
+        #custom-navbar .nav-link:hover {
+            color: #f7931e !important;
+            transform: translateY(-2px);
+        }
+
+        #custom-navbar .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 50%;
+            background-color: #f7931e;
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        #custom-navbar .nav-link:hover::after {
+            width: 100%;
+        }
+
+        #custom-navbar .nav-link.active {
+            color: #f7931e !important;
+        }
+
+        #custom-navbar .nav-link.active::after {
+            width: 100%;
+            background-color: #f7931e;
+        }
+
+        /* Logo styling */
+        .navbar-brand {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-decoration: none;
+            padding: 5px 0;
+        }
+
+        .logo-text {
+            color: #000;
+            font-family: 'Arial', sans-serif;
+            margin-right: 2px;
+        }
+
+        .logo-text-zone {
+            color: #f7931e;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .logo-container:hover .logo-text,
+        .logo-container:hover .logo-text-zone {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+
+        /* Logo hover effect */
+        .navbar-brand:hover .logo-img {
+            transform: scale(1.05);
+        }
+
+        /* Improved navigation links */
         #custom-navbar .nav-link, 
         #custom-navbar .navbar-nav .nav-link,
         .navbar-nav .nav-link, 
@@ -56,13 +142,95 @@ if (!isset($current_page)) {
         #custom-navbar a {
             color: #000000 !important;
             font-weight: 600 !important;
+            padding: 0.8rem 1.2rem;
+            position: relative;
+            transition: color 0.3s ease;
         }
+
+        /* Hover effect for nav links */
+        #custom-navbar .nav-link:hover {
+            color: #f7931e !important;
+        }
+
+        /* Active link indicator */
+        #custom-navbar .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 30px;
+            height: 2px;
+            background-color: #f7931e;
+        }
+
+        /* Enhanced search icon */
         .search-icon, .search-icon i {
             color: #000000 !important;
+            transition: color 0.3s ease;
         }
+        
+        .search-icon:hover, .search-icon:hover i {
+            color: #f7931e !important;
+        }
+
+        /* Enhanced login button styling */
         .btn-login {
             color: #000000 !important;
-            border-color: #000000 !important;
+            border: 2px solid #000000 !important;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 600;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            transition: all 0.3s ease;
+            background-color: transparent !important;
+        }
+
+        .btn-login:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background-color: #f7931e;
+            transition: all 0.4s ease;
+            z-index: -1;
+        }
+
+        .btn-login:hover {
+            color: #ffffff !important;
+            border-color: #f7931e !important;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(247, 147, 30, 0.3);
+        }
+
+        .btn-login:hover:before {
+            left: 0;
+        }
+
+        .btn-login:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 8px rgba(247, 147, 30, 0.3);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 991px) {
+            .navbar-brand {
+                padding: 0.5rem 0;
+            }
+            
+            #custom-navbar .nav-link {
+                padding: 0.5rem 1rem;
+            }
+            
+            .btn-login {
+                margin-top: 0.5rem;
+                width: 100%;
+                text-align: center;
+            }
         }
     </style>
 </head>
@@ -73,8 +241,11 @@ if (!isset($current_page)) {
     <nav id="custom-navbar" class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm">
         <div class="container">
             <!-- Logo on the left -->
-            <a class="navbar-brand" href="<?php echo SITE_URL; ?>">
-                <img src="<?php echo SITE_URL; ?>assets/images/fitzone.png" alt="FitZone" height="35">
+            <a class="navbar-brand py-2" href="<?php echo SITE_URL; ?>">
+                <div class="logo-container">
+                    <span class="logo-text">Fit</span>
+                    <span class="logo-text-zone">Zone</span>
+                </div>
             </a>
             
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" 
@@ -147,7 +318,8 @@ if (!isset($current_page)) {
     width: 38px;
     height: 38px;
     border-radius: 50%;
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: #ffffff;
+    border: 2px solid #000000;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -157,19 +329,26 @@ if (!isset($current_page)) {
 }
 
 .search-icon:hover {
-    background-color: rgba(0, 0, 0, 0.1);
-    transform: scale(1.05);
+    background-color: #f7931e;
+    border-color: #f7931e;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 8px rgba(247, 147, 30, 0.3);
+}
+
+.search-icon:hover i {
+    color: #ffffff !important;
 }
 
 .search-dropdown {
     position: absolute;
-    top: 100%;
+    top: calc(100% + 10px);
     right: 0;
     width: 320px;
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 12px;
+    border: 2px solid #000000;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     visibility: hidden;
     opacity: 0;
@@ -190,17 +369,18 @@ if (!isset($current_page)) {
 
 .search-input {
     width: 100%;
-    padding: 10px 40px 10px 15px;
-    border: 1px solid #ddd;
-    border-radius: 30px;
-    font-size: 0.9rem;
+    padding: 12px 45px 12px 15px;
+    border: 2px solid #000000;
+    border-radius: 25px;
+    font-size: 0.95rem;
+    background-color: #ffffff;
     transition: all 0.3s ease;
     outline: none;
 }
 
 .search-input:focus {
-    border-color: #007bff;
-    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+    border-color: #f7931e;
+    box-shadow: 0 0 0 3px rgba(247, 147, 30, 0.15);
 }
 
 .search-submit {
@@ -208,21 +388,44 @@ if (!isset($current_page)) {
     right: 5px;
     top: 50%;
     transform: translateY(-50%);
-    background: #007bff;
+    background: #000000;
     color: white;
-    border: none;
-    width: 30px;
-    height: 30px;
+    border: 2px solid #000000;
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: all 0.2s ease;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.search-submit:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #f7931e;
+    transition: all 0.4s ease;
+    z-index: 1;
 }
 
 .search-submit:hover {
-    background: #0056b3;
+    border-color: #f7931e;
+    box-shadow: 0 3px 8px rgba(247, 147, 30, 0.3);
+}
+
+.search-submit:hover:before {
+    left: 0;
+}
+
+.search-submit i {
+    position: relative;
+    z-index: 2;
 }
 
 .search-results {

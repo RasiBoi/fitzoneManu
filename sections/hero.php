@@ -11,7 +11,6 @@ if (!defined('FITZONE_APP')) {
 ?>
 
 <section class="hero-section" id="hero-section" style="background: #ffffff !important;">
-    <div class="hero-overlay" style="background: linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.85)) !important;"></div>
     <div class="hero-particles" id="hero-particles" style="background: transparent !important;"></div>
     
     <div class="container position-relative">
@@ -60,7 +59,7 @@ if (!defined('FITZONE_APP')) {
         background-position: center right !important;
         background-size: cover !important;
         background-repeat: no-repeat !important;
-        filter: grayscale(100%) !important;
+        filter: none !important;
         border-radius: 10px !important;
     }
     
@@ -72,6 +71,21 @@ if (!defined('FITZONE_APP')) {
         font-weight: bold !important;
     }
     
+    /* Join Now button styling */
+    .hero-btn {
+        background-color: #f7931e !important;
+        border-color: #f7931e !important;
+        color: #ffffff !important;
+        transition: all 0.3s ease !important;
+    }
+    
+    .hero-btn:hover {
+        background-color: #e07d0e !important;
+        border-color: #e07d0e !important;
+        transform: translateY(-2px) !important;
+        box-shadow: 0 5px 15px rgba(247, 147, 30, 0.3) !important;
+    }
+
     /* Remove shape animations */
     .hero-shape-1, .hero-shape-2 {
         display: none !important;

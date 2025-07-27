@@ -163,7 +163,7 @@ $featured_classes = [
         }
         
         #cta-section .section-separator span {
-            background-color: #000;
+            background-color: #f7931e;
         }
         
         .contact-description {
@@ -172,12 +172,19 @@ $featured_classes = [
         
         .contact-detail-item {
             border-bottom: 1px solid #ddd;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-detail-item:hover .contact-icon {
+            background-color: #f7931e;
+            color: #fff;
+            border-color: #f7931e;
         }
         
         .contact-icon {
-            background-color: #f0f0f0;
-            color: #000;
-            border: 1px solid #ddd;
+            background-color: #fff;
+            color: #f7931e;
+            border: 1px solid #f7931e;
         }
         
         .contact-info-text h5 {
@@ -199,14 +206,21 @@ $featured_classes = [
             color: #000;
         }
         
-        .form-submit-button {
-            background-color: #000;
-            color: #fff;
-            border: none;
+        .form-control:focus {
+            border-color: #f7931e;
+            box-shadow: 0 0 0 0.2rem rgba(247, 147, 30, 0.25);
         }
         
-        .form-submit-button:hover {
-            background-color: #333;
+        .btn-contact {
+            background-color: #f7931e !important;
+            color: #fff !important;
+            border: none;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-contact:hover {
+            background-color: #e07d0f !important;
+            transform: translateY(-2px);
         }
         
         /* Hide background shapes */

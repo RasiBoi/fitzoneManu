@@ -310,74 +310,74 @@ $active_page = 'classes';
 <body class="role-member">
     <div class="dashboard-container">
         <!-- Sidebar -->
-        <div class="sidebar">
-            <div class="sidebar-header">
+        <div class="sidebar" style="background-color: #fff; border-right: 2px solid #f7931e;">
+            <div class="sidebar-header" style="border-bottom: 1px solid #f7931e; padding: 20px;">
                 <div class="sidebar-brand">
-                    <img src="../../assets/images/fitzone.png" alt="FitZone">
+                    <img src="../../assets/images/fitzone.png" alt="FitZone" style="height: 30px;">
                 </div>
             </div>
             
-            <div class="sidebar-menu">
-                <ul>
+            <div class="sidebar-menu" style="padding-top: 15px;">
+                <ul style="list-style: none; padding: 0; margin: 0;">
                     <li>
-                        <a href="index.php" class="<?php echo $active_page === 'dashboard' ? 'active' : ''; ?>">
-                            <span class="menu-icon"><i class="fas fa-tachometer-alt"></i></span>
-                            <span>Dashboard</span>
+                        <a href="index.php" class="<?php echo $active_page === 'dashboard' ? 'active' : ''; ?>" style="display: flex; align-items: center; padding: 15px 20px; color: #000; text-decoration: none; border-left: 4px solid <?php echo $active_page === 'dashboard' ? '#f7931e' : 'transparent'; ?>; background-color: <?php echo $active_page === 'dashboard' ? 'rgba(247, 147, 30, 0.1)' : 'transparent'; ?>;">
+                            <span class="menu-icon" style="margin-right: 10px; width: 20px; text-align: center; color: <?php echo $active_page === 'dashboard' ? '#f7931e' : '#000'; ?>;"><i class="fas fa-tachometer-alt"></i></span>
+                            <span style="font-weight: <?php echo $active_page === 'dashboard' ? 'bold' : 'normal'; ?>;">Dashboard</span>
                         </a>
                     </li>
                     
                     <li>
-                        <a href="profile.php" class="<?php echo $active_page === 'profile' ? 'active' : ''; ?>">
-                            <span class="menu-icon"><i class="fas fa-user"></i></span>
-                            <span>My Profile</span>
+                        <a href="profile.php" class="<?php echo $active_page === 'profile' ? 'active' : ''; ?>" style="display: flex; align-items: center; padding: 15px 20px; color: #000; text-decoration: none; border-left: 4px solid <?php echo $active_page === 'profile' ? '#f7931e' : 'transparent'; ?>; background-color: <?php echo $active_page === 'profile' ? 'rgba(247, 147, 30, 0.1)' : 'transparent'; ?>;">
+                            <span class="menu-icon" style="margin-right: 10px; width: 20px; text-align: center; color: <?php echo $active_page === 'profile' ? '#f7931e' : '#000'; ?>;"><i class="fas fa-user"></i></span>
+                            <span style="font-weight: <?php echo $active_page === 'profile' ? 'bold' : 'normal'; ?>;">My Profile</span>
                         </a>
                     </li>
                     
                     <li>
-                        <a href="membership.php" class="<?php echo $active_page === 'membership' ? 'active' : ''; ?>">
-                            <span class="menu-icon"><i class="fas fa-id-card"></i></span>
-                            <span>My Membership</span>
+                        <a href="membership.php" class="<?php echo $active_page === 'membership' ? 'active' : ''; ?>" style="display: flex; align-items: center; padding: 15px 20px; color: #000; text-decoration: none; border-left: 4px solid <?php echo $active_page === 'membership' ? '#f7931e' : 'transparent'; ?>; background-color: <?php echo $active_page === 'membership' ? 'rgba(247, 147, 30, 0.1)' : 'transparent'; ?>;">
+                            <span class="menu-icon" style="margin-right: 10px; width: 20px; text-align: center; color: <?php echo $active_page === 'membership' ? '#f7931e' : '#000'; ?>;"><i class="fas fa-id-card"></i></span>
+                            <span style="font-weight: <?php echo $active_page === 'membership' ? 'bold' : 'normal'; ?>;">My Membership</span>
                         </a>
                     </li>
                     
                     <li>
-                        <a href="classes.php" class="<?php echo $active_page === 'classes' ? 'active' : ''; ?>">
-                            <span class="menu-icon"><i class="fas fa-dumbbell"></i></span>
-                            <span>Classes</span>
+                        <a href="classes.php" class="<?php echo $active_page === 'classes' ? 'active' : ''; ?>" style="display: flex; align-items: center; padding: 15px 20px; color: #000; text-decoration: none; border-left: 4px solid <?php echo $active_page === 'classes' ? '#f7931e' : 'transparent'; ?>; background-color: <?php echo $active_page === 'classes' ? 'rgba(247, 147, 30, 0.1)' : 'transparent'; ?>;">
+                            <span class="menu-icon" style="margin-right: 10px; width: 20px; text-align: center; color: <?php echo $active_page === 'classes' ? '#f7931e' : '#000'; ?>;"><i class="fas fa-dumbbell"></i></span>
+                            <span style="font-weight: <?php echo $active_page === 'classes' ? 'bold' : 'normal'; ?>;">Classes</span>
                         </a>
                     </li>
                     
                     <li>
-                        <a href="schedule.php" class="<?php echo $active_page === 'schedule' ? 'active' : ''; ?>">
-                            <span class="menu-icon"><i class="fas fa-calendar-alt"></i></span>
-                            <span>My Schedule</span>
+                        <a href="schedule.php" class="<?php echo $active_page === 'schedule' ? 'active' : ''; ?>" style="display: flex; align-items: center; padding: 15px 20px; color: #000; text-decoration: none; border-left: 4px solid <?php echo $active_page === 'schedule' ? '#f7931e' : 'transparent'; ?>; background-color: <?php echo $active_page === 'schedule' ? 'rgba(247, 147, 30, 0.1)' : 'transparent'; ?>;">
+                            <span class="menu-icon" style="margin-right: 10px; width: 20px; text-align: center; color: <?php echo $active_page === 'schedule' ? '#f7931e' : '#000'; ?>;"><i class="fas fa-calendar-alt"></i></span>
+                            <span style="font-weight: <?php echo $active_page === 'schedule' ? 'bold' : 'normal'; ?>;">My Schedule</span>
                         </a>
                     </li>
                     
                     <li>
-                        <a href="progress.php" class="<?php echo $active_page === 'progress' ? 'active' : ''; ?>">
-                            <span class="menu-icon"><i class="fas fa-chart-line"></i></span>
-                            <span>My Progress</span>
+                        <a href="progress.php" class="<?php echo $active_page === 'progress' ? 'active' : ''; ?>" style="display: flex; align-items: center; padding: 15px 20px; color: #000; text-decoration: none; border-left: 4px solid <?php echo $active_page === 'progress' ? '#f7931e' : 'transparent'; ?>; background-color: <?php echo $active_page === 'progress' ? 'rgba(247, 147, 30, 0.1)' : 'transparent'; ?>;">
+                            <span class="menu-icon" style="margin-right: 10px; width: 20px; text-align: center; color: <?php echo $active_page === 'progress' ? '#f7931e' : '#000'; ?>;"><i class="fas fa-chart-line"></i></span>
+                            <span style="font-weight: <?php echo $active_page === 'progress' ? 'bold' : 'normal'; ?>;">My Progress</span>
                         </a>
                     </li>
                     
                     <li>
-                        <a href="nutrition.php" class="<?php echo $active_page === 'nutrition' ? 'active' : ''; ?>">
-                            <span class="menu-icon"><i class="fas fa-utensils"></i></span>
-                            <span>Nutrition Plans</span>
+                        <a href="nutrition.php" class="<?php echo $active_page === 'nutrition' ? 'active' : ''; ?>" style="display: flex; align-items: center; padding: 15px 20px; color: #000; text-decoration: none; border-left: 4px solid <?php echo $active_page === 'nutrition' ? '#f7931e' : 'transparent'; ?>; background-color: <?php echo $active_page === 'nutrition' ? 'rgba(247, 147, 30, 0.1)' : 'transparent'; ?>;">
+                            <span class="menu-icon" style="margin-right: 10px; width: 20px; text-align: center; color: <?php echo $active_page === 'nutrition' ? '#f7931e' : '#000'; ?>;"><i class="fas fa-utensils"></i></span>
+                            <span style="font-weight: <?php echo $active_page === 'nutrition' ? 'bold' : 'normal'; ?>;">Nutrition Plans</span>
                         </a>
                     </li>
                     
                     <li>
-                        <a href="messages.php" class="<?php echo $active_page === 'messages' ? 'active' : ''; ?>">
-                            <span class="menu-icon"><i class="fas fa-envelope"></i></span>
-                            <span>Messages</span>
+                        <a href="messages.php" class="<?php echo $active_page === 'messages' ? 'active' : ''; ?>" style="display: flex; align-items: center; padding: 15px 20px; color: #000; text-decoration: none; border-left: 4px solid <?php echo $active_page === 'messages' ? '#f7931e' : 'transparent'; ?>; background-color: <?php echo $active_page === 'messages' ? 'rgba(247, 147, 30, 0.1)' : 'transparent'; ?>;">
+                            <span class="menu-icon" style="margin-right: 10px; width: 20px; text-align: center; color: <?php echo $active_page === 'messages' ? '#f7931e' : '#000'; ?>;"><i class="fas fa-envelope"></i></span>
+                            <span style="font-weight: <?php echo $active_page === 'messages' ? 'bold' : 'normal'; ?>;">Messages</span>
                         </a>
                     </li>
                     
                     <li>
-                        <a href="../../logout.php">
-                            <span class="menu-icon"><i class="fas fa-sign-out-alt"></i></span>
+                        <a href="../../logout.php" style="display: flex; align-items: center; padding: 15px 20px; color: #000; text-decoration: none;">
+                            <span class="menu-icon" style="margin-right: 10px; width: 20px; text-align: center;"><i class="fas fa-sign-out-alt"></i></span>
                             <span>Logout</span>
                         </a>
                     </li>
@@ -388,27 +388,27 @@ $active_page = 'classes';
         <!-- Main Content -->
         <div class="main-content">
             <!-- Top Navigation Bar -->
-            <div class="topbar">
+            <div class="topbar" style="background-color: #fff; border-bottom: 1px solid #f7931e; padding: 15px; margin-bottom: 20px;">
                 <div class="d-flex align-items-center">
-                    <div class="toggle-sidebar me-3">
+                    <div class="toggle-sidebar me-3" style="color: #f7931e; cursor: pointer;">
                         <i class="fas fa-bars"></i>
                     </div>
-                    <div class="topbar-title">
+                    <div class="topbar-title" style="color: #f7931e; font-weight: 600; font-size: 1.2rem;">
                         Classes
                     </div>
                 </div>
                 
                 <div class="topbar-right">
                     <div class="dropdown">
-                        <div class="user-dropdown" data-bs-toggle="dropdown">
-                            <img src="<?php echo $profile_image; ?>" alt="Profile" class="profile-img">
-                            <span class="username d-none d-sm-inline"><?php echo htmlspecialchars($username); ?></span>
-                            <i class="fas fa-chevron-down ms-1 small"></i>
+                        <div class="user-dropdown d-flex align-items-center" data-bs-toggle="dropdown" style="cursor: pointer;">
+                            <img src="<?php echo $profile_image; ?>" alt="Profile" class="profile-img" style="width: 32px; height: 32px; border-radius: 50%; margin-right: 8px;">
+                            <span class="username d-none d-sm-inline me-2" style="color: #000; font-weight: 500;"><?php echo htmlspecialchars($username); ?></span>
+                            <i class="fas fa-chevron-down small" style="color: #000;"></i>
                         </div>
                         
-                        <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="profile.php"><i class="fas fa-user"></i> My Profile</a></li>
-                            <li><a class="dropdown-item" href="../../logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                        <ul class="dropdown-menu dropdown-menu-end" style="background-color: #fff; border: 1px solid #000; border-radius: 0; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                            <li><a class="dropdown-item" href="profile.php" style="color: #000; padding: 10px 15px;"><i class="fas fa-user me-2"></i>My Profile</a></li>
+                            <li><a class="dropdown-item" href="../../logout.php" style="color: #000; padding: 10px 15px;"><i class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
                         </ul>
                     </div>
                 </div>
@@ -419,7 +419,7 @@ $active_page = 'classes';
                 <!-- Page Header -->
                 <div class="page-header d-flex justify-content-between align-items-center">
                     <div>
-                        <h4>Fitness Classes</h4>
+                        <h4 style="color: #f7931e; font-weight: bold;">Fitness Classes</h4>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="index.php">Home</a></li>
@@ -430,42 +430,42 @@ $active_page = 'classes';
                 </div>
                 
                 <?php if (!$has_membership): ?>
-                <div class="alert alert-warning" role="alert">
+                <div class="alert alert-warning" role="alert" style="background-color: #fff; color: #000; border: 2px solid #f7931e;">
                     <div class="d-flex">
                         <div class="me-3">
-                            <i class="fas fa-exclamation-triangle fa-2x"></i>
+                            <i class="fas fa-exclamation-triangle fa-2x" style="color: #f7931e;"></i>
                         </div>
                         <div>
-                            <h5>Active Membership Required</h5>
-                            <p class="mb-0">You need an active membership to book fitness classes. <a href="membership.php" class="alert-link">Purchase a membership</a> to unlock this feature.</p>
+                            <h5 style="color: #000000ff;">Active Membership Required</h5>
+                            <p class="mb-0">You need an active membership to book fitness classes. <a href="membership.php" class="alert-link" style="color: #f7931e;">Purchase a membership</a> to unlock this feature.</p>
                         </div>
                     </div>
                 </div>
                 <?php endif; ?>
                 
                 <?php if ($success_message): ?>
-                <div class="alert alert-success alert-dismissible fade show" role="alert">
-                    <i class="fas fa-check-circle me-2"></i> <?php echo $success_message; ?>
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                <div class="alert alert-success alert-dismissible fade show" role="alert" style="background-color: #fff; color: #000; border: 2px solid #f7931e;">
+                    <i class="fas fa-check-circle me-2" style="color: #f7931e;"></i> <?php echo $success_message; ?>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" style="background-color: #f7931e; opacity: 0.8;"></button>
                 </div>
                 <?php endif; ?>
                 
                 <?php if ($error_message): ?>
-                <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                    <i class="fas fa-exclamation-circle me-2"></i> <?php echo $error_message; ?>
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                <div class="alert alert-danger alert-dismissible fade show" role="alert" style="background-color: #fff; color: #000; border: 2px solid #f7931e;">
+                    <i class="fas fa-exclamation-circle me-2" style="color: #f7931e;"></i> <?php echo $error_message; ?>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" style="background-color: #f7931e; opacity: 0.8;"></button>
                 </div>
                 <?php endif; ?>
                 
                 <!-- Tabs for Class Navigation -->
-                <ul class="nav nav-tabs mb-4" id="classTab" role="tablist">
+                <ul class="nav mb-4" id="classTab" role="tablist" style="border-bottom: 1px solid #ddd; margin-bottom: 20px; padding-bottom: 0;">
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link active" id="all-classes-tab" data-bs-toggle="tab" data-bs-target="#all-classes" type="button" role="tab" aria-controls="all-classes" aria-selected="true">
+                        <button class="nav-link active" id="all-classes-tab" data-bs-toggle="tab" data-bs-target="#all-classes" type="button" role="tab" aria-controls="all-classes" aria-selected="true" style="border: none; border-bottom: 2px solid #f7931e; border-radius: 0; color: #f7931e; font-weight: 600; padding: 10px 20px; margin-right: 5px; background: transparent;">
                             <i class="fas fa-list me-2"></i>Available Classes
                         </button>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="my-bookings-tab" data-bs-toggle="tab" data-bs-target="#my-bookings" type="button" role="tab" aria-controls="my-bookings" aria-selected="false">
+                        <button class="nav-link" id="my-bookings-tab" data-bs-toggle="tab" data-bs-target="#my-bookings" type="button" role="tab" aria-controls="my-bookings" aria-selected="false" style="border: none; border-bottom: 2px solid transparent; border-radius: 0; color: #666; padding: 10px 20px; margin-right: 5px; background: transparent;">
                             <i class="fas fa-calendar-check me-2"></i>My Bookings (<?php echo count($booked_classes); ?>)
                         </button>
                     </li>
@@ -475,13 +475,13 @@ $active_page = 'classes';
                     <!-- All Classes Tab -->
                     <div class="tab-pane fade show active" id="all-classes" role="tabpanel" aria-labelledby="all-classes-tab">
                         <?php if (empty($classes)): ?>
-                            <div class="alert alert-info">
-                                <i class="fas fa-info-circle me-2"></i> No classes are currently available. Please check back later.
+                            <div class="alert" style="background-color: #f8f8f8; color: #000; border: 1px solid #ddd; border-radius: 5px; padding: 15px;">
+                                <i class="fas fa-info-circle me-2" style="color: #f7931e;"></i> No classes are currently available. Please check back later.
                             </div>
                         <?php else: ?>
                             <?php foreach ($classes_by_date as $date => $day_classes): ?>
-                                <div class="class-date-header">
-                                    <h5 class="mb-0">
+                                <div class="class-date-header" style="margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid #f7931e;">
+                                    <h5 class="mb-0" style="color: #f7931e; font-weight: 600;">
                                         <?php 
                                         $date_obj = new DateTime($date);
                                         $today = new DateTime('today');
@@ -501,16 +501,16 @@ $active_page = 'classes';
                                 <div class="row">
                                     <?php foreach ($day_classes as $class): ?>
                                         <div class="col-md-6 col-lg-4 mb-4">
-                                            <div class="card class-card h-100">
+                                            <div class="card class-card h-100" style="border: 1px solid #ddd; border-radius: 8px; overflow: hidden; transition: all 0.3s;">
                                                 <?php if ($class['capacity'] <= 5): ?>
-                                                    <span class="badge bg-warning class-badge">Almost Full</span>
+                                                    <span class="badge class-badge" style="position: absolute; top: 10px; right: 10px; z-index: 10; background-color: #f7931e; color: #fff; padding: 5px 10px; border-radius: 4px; font-size: 12px;">Almost Full</span>
                                                 <?php endif; ?>
                                                 
-                                                <div class="card-header">
-                                                    <h5 class="mb-0"><?php echo htmlspecialchars($class['name']); ?></h5>
+                                                <div class="card-header" style="background-color: #f7931e; color: #fff; padding: 15px;">
+                                                    <h5 class="mb-0" style="font-weight: 600; color: #fff;"><?php echo htmlspecialchars($class['name']); ?></h5>
                                                 </div>
                                                 
-                                                <div class="card-body">
+                                                <div class="card-body" style="padding: 20px;">
                                                     <?php 
                                                     // Fix image path handling
                                                     $image = isset($class['image']) ? $class['image'] : '';
@@ -528,27 +528,27 @@ $active_page = 'classes';
                                                         <img src="<?php echo $class_image_url; ?>" alt="<?php echo htmlspecialchars($class['name']); ?>" class="img-fluid rounded">
                                                     </div>
                                                     
-                                                    <p><?php echo htmlspecialchars($class['description']); ?></p>
+                                                    <p style="color: #333;"><?php echo htmlspecialchars($class['description']); ?></p>
                                                     
                                                     <div class="class-info">
-                                                        <div class="class-info-item">
-                                                            <span class="class-info-icon"><i class="fas fa-clock"></i></span>
-                                                            <span><?php echo date('g:i A', strtotime($class['start_time'])); ?> - <?php echo date('g:i A', strtotime($class['end_time'])); ?></span>
+                                                        <div class="class-info-item" style="display: flex; align-items: center; margin-bottom: 8px;">
+                                                            <span class="class-info-icon" style="margin-right: 8px; color: #f7931e;"><i class="fas fa-clock"></i></span>
+                                                            <span style="color: #333;"><?php echo date('g:i A', strtotime($class['start_time'])); ?> - <?php echo date('g:i A', strtotime($class['end_time'])); ?></span>
                                                         </div>
                                                         
-                                                        <div class="class-info-item">
-                                                            <span class="class-info-icon"><i class="fas fa-map-marker-alt"></i></span>
-                                                            <span><?php echo htmlspecialchars($class['location']); ?></span>
+                                                        <div class="class-info-item" style="display: flex; align-items: center; margin-bottom: 8px;">
+                                                            <span class="class-info-icon" style="margin-right: 8px; color: #f7931e;"><i class="fas fa-map-marker-alt"></i></span>
+                                                            <span style="color: #333;"><?php echo htmlspecialchars($class['location']); ?></span>
                                                         </div>
                                                         
-                                                        <div class="class-info-item">
-                                                            <span class="class-info-icon"><i class="fas fa-user"></i></span>
-                                                            <span><?php echo htmlspecialchars($class['trainer_name']); ?></span>
+                                                        <div class="class-info-item" style="display: flex; align-items: center; margin-bottom: 8px;">
+                                                            <span class="class-info-icon" style="margin-right: 8px; color: #f7931e;"><i class="fas fa-user"></i></span>
+                                                            <span style="color: #333;"><?php echo htmlspecialchars($class['trainer_name']); ?></span>
                                                         </div>
                                                         
-                                                        <div class="class-info-item">
-                                                            <span class="class-info-icon"><i class="fas fa-users"></i></span>
-                                                            <span>
+                                                        <div class="class-info-item" style="display: flex; align-items: center; margin-bottom: 8px;">
+                                                            <span class="class-info-icon" style="margin-right: 8px; color: #f7931e;"><i class="fas fa-users"></i></span>
+                                                            <span style="color: #333;">
                                                                 <?php 
                                                                 // Get number of bookings for this class
                                                                 $bookings = $db->fetchSingle("SELECT COUNT(*) as count FROM class_bookings WHERE class_id = ?", [$class['id']]);
@@ -560,7 +560,7 @@ $active_page = 'classes';
                                                     </div>
                                                 </div>
                                                 
-                                                <div class="card-footer bg-transparent">
+                                                <div class="card-footer bg-transparent" style="padding: 15px 20px; border-top: 1px solid #eee;">
                                                     <?php 
                                                     // Check if user has already booked this class
                                                     $is_booked = false;
@@ -576,22 +576,22 @@ $active_page = 'classes';
                                                     ?>
                                                     
                                                     <?php if ($is_booked): ?>
-                                                        <button class="btn btn-success w-100" disabled>
+                                                        <button class="btn w-100" disabled style="background-color: #f7931e; color: #fff; border: none; padding: 10px 20px; border-radius: 4px;">
                                                             <i class="fas fa-check me-2"></i>Booked
                                                         </button>
                                                     <?php elseif ($is_full): ?>
-                                                        <button class="btn btn-outline-secondary w-100" disabled>
+                                                        <button class="btn w-100" disabled style="background-color: #f8f8f8; color: #666; border: 1px solid #ddd; padding: 10px 20px; border-radius: 4px;">
                                                             <i class="fas fa-users-slash me-2"></i>Class Full
                                                         </button>
                                                     <?php elseif ($has_membership): ?>
                                                         <form method="post">
                                                             <input type="hidden" name="class_id" value="<?php echo $class['id']; ?>">
-                                                            <button type="submit" name="book_class" class="btn btn-primary w-100">
+                                                            <button type="submit" name="book_class" class="btn w-100" style="background-color: #f7931e; color: #fff; border: none; padding: 10px 20px; border-radius: 4px; transition: all 0.3s;">
                                                                 <i class="fas fa-calendar-plus me-2"></i>Book Class
                                                             </button>
                                                         </form>
                                                     <?php else: ?>
-                                                        <a href="membership.php" class="btn btn-outline-primary w-100">
+                                                        <a href="membership.php" class="btn w-100" style="background-color: transparent; color: #f7931e; border: 1px solid #f7931e; padding: 10px 20px; border-radius: 4px; text-decoration: none; display: inline-block; text-align: center; transition: all 0.3s;">
                                                             <i class="fas fa-lock me-2"></i>Get Membership to Book
                                                         </a>
                                                     <?php endif; ?>
@@ -607,48 +607,48 @@ $active_page = 'classes';
                     <!-- My Bookings Tab -->
                     <div class="tab-pane fade" id="my-bookings" role="tabpanel" aria-labelledby="my-bookings-tab">
                         <?php if (empty($booked_classes)): ?>
-                            <div class="alert alert-info">
-                                <i class="fas fa-info-circle me-2"></i> You haven't booked any classes yet. Browse available classes and book your spots!
+                            <div class="alert" style="background-color: #f8f8f8; color: #000; border: 1px solid #ddd; border-radius: 5px; padding: 15px;">
+                                <i class="fas fa-info-circle me-2" style="color: #f7931e;"></i> You haven't booked any classes yet. Browse available classes and book your spots!
                             </div>
                         <?php else: ?>
                             <div class="table-responsive">
-                                <table class="table table-dark">
+                                <table class="table" style="border-collapse: separate; border-spacing: 0; width: 100%; border: 1px solid #ddd; border-radius: 5px; overflow: hidden;">
                                     <thead>
-                                        <tr>
-                                            <th>Class</th>
-                                            <th>Date</th>
-                                            <th>Time</th>
-                                            <th>Location</th>
-                                            <th>Trainer</th>
-                                            <th>Actions</th>
+                                        <tr style="background-color: #f7931e; color: #fff;">
+                                            <th style="padding: 15px; border-bottom: 1px solid #f7931e; font-weight: 500;">Class</th>
+                                            <th style="padding: 15px; border-bottom: 1px solid #f7931e; font-weight: 500;">Date</th>
+                                            <th style="padding: 15px; border-bottom: 1px solid #f7931e; font-weight: 500;">Time</th>
+                                            <th style="padding: 15px; border-bottom: 1px solid #f7931e; font-weight: 500;">Location</th>
+                                            <th style="padding: 15px; border-bottom: 1px solid #f7931e; font-weight: 500;">Trainer</th>
+                                            <th style="padding: 15px; border-bottom: 1px solid #f7931e; font-weight: 500;">Actions</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <?php foreach ($booked_classes as $booking): ?>
-                                            <tr>
-                                                <td><?php echo htmlspecialchars($booking['name']); ?></td>
-                                                <td>
+                                            <tr style="border-bottom: 1px solid #eee;">
+                                                <td style="padding: 12px 15px; color: #333;"><?php echo htmlspecialchars($booking['name']); ?></td>
+                                                <td style="padding: 12px 15px; color: #333;">
                                                     <?php 
                                                     $date_obj = new DateTime($booking['class_date']);
                                                     $today = new DateTime('today');
                                                     $tomorrow = new DateTime('tomorrow');
                                                     
                                                     if ($date_obj->format('Y-m-d') === $today->format('Y-m-d')) {
-                                                        echo '<span class="badge bg-primary">Today</span>';
+                                                        echo '<span class="badge" style="background-color: #f7931e; color: #fff; padding: 4px 8px; border-radius: 4px; font-size: 11px;">Today</span>';
                                                     } elseif ($date_obj->format('Y-m-d') === $tomorrow->format('Y-m-d')) {
-                                                        echo '<span class="badge bg-info">Tomorrow</span>';
+                                                        echo '<span class="badge" style="background-color: #f7931e; color: #fff; padding: 4px 8px; border-radius: 4px; font-size: 11px;">Tomorrow</span>';
                                                     } else {
                                                         echo $date_obj->format('m/d/Y');
                                                     }
                                                     ?>
                                                 </td>
-                                                <td><?php echo date('g:i A', strtotime($booking['start_time'])); ?> - <?php echo date('g:i A', strtotime($booking['end_time'])); ?></td>
-                                                <td><?php echo htmlspecialchars($booking['location']); ?></td>
-                                                <td><?php echo htmlspecialchars($booking['trainer_name']); ?></td>
-                                                <td>
+                                                <td style="padding: 12px 15px; color: #333;"><?php echo date('g:i A', strtotime($booking['start_time'])); ?> - <?php echo date('g:i A', strtotime($booking['end_time'])); ?></td>
+                                                <td style="padding: 12px 15px; color: #333;"><?php echo htmlspecialchars($booking['location']); ?></td>
+                                                <td style="padding: 12px 15px; color: #333;"><?php echo htmlspecialchars($booking['trainer_name']); ?></td>
+                                                <td style="padding: 12px 15px;">
                                                     <form method="post" onsubmit="return confirm('Are you sure you want to cancel this booking?');">
                                                         <input type="hidden" name="booking_id" value="<?php echo $booking['booking_id']; ?>">
-                                                        <button type="submit" name="cancel_booking" class="btn btn-sm btn-outline-danger">
+                                                        <button type="submit" name="cancel_booking" class="btn btn-sm" style="background-color: transparent; color: #f7931e; border: 1px solid #f7931e; padding: 5px 10px; border-radius: 4px; font-size: 12px; transition: all 0.3s;">
                                                             <i class="fas fa-times"></i> Cancel
                                                         </button>
                                                     </form>
@@ -668,17 +668,17 @@ $active_page = 'classes';
     <!-- Class Details Modal -->
     <div class="modal fade" id="classDetailsModal" tabindex="-1" aria-labelledby="classDetailsModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
-            <div class="modal-content bg-dark text-white">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="classDetailsModalLabel">Class Details</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-content" style="background-color: #fff; color: #000; border: 2px solid #f7931e;">
+                <div class="modal-header" style="background-color: #f7931e; color: #fff; border-bottom: 1px solid #f7931e;">
+                    <h5 class="modal-title" id="classDetailsModalLabel" style="color: #fff;">Class Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="background-color: #fff; opacity: 0.8;"></button>
                 </div>
-                <div class="modal-body" id="classDetailsContent">
+                <div class="modal-body" id="classDetailsContent" style="color: #000;">
                     <!-- Content will be loaded dynamically -->
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-success" id="bookClassBtn">Book Class</button>
+                <div class="modal-footer" style="border-top: 1px solid #f7931e;">
+                    <button type="button" class="btn" data-bs-dismiss="modal" style="background-color: transparent; color: #f7931e; border: 1px solid #f7931e; padding: 8px 16px; border-radius: 4px;">Close</button>
+                    <button type="button" class="btn" id="bookClassBtn" style="background-color: #f7931e; color: #fff; border: none; padding: 8px 16px; border-radius: 4px;">Book Class</button>
                 </div>
             </div>
         </div>
@@ -705,6 +705,42 @@ $active_page = 'classes';
         
         // Check on resize
         window.addEventListener('resize', checkScreenSize);
+        
+        // Tab switching with proper orange styling
+        const tabLinks = document.querySelectorAll('#classTab .nav-link');
+        tabLinks.forEach(tab => {
+            tab.addEventListener('click', function() {
+                tabLinks.forEach(t => {
+                    t.style.borderBottom = '2px solid transparent';
+                    t.style.color = '#666';
+                    t.style.fontWeight = 'normal';
+                });
+                
+                this.style.borderBottom = '2px solid #f7931e';
+                this.style.color = '#f7931e';
+                this.style.fontWeight = '600';
+            });
+        });
+        
+        // Add hover effects to buttons
+        const buttons = document.querySelectorAll('button[style*="background-color: #f7931e"], a[style*="color: #f7931e"]');
+        buttons.forEach(btn => {
+            btn.addEventListener('mouseenter', function() {
+                if (this.style.backgroundColor === 'rgb(247, 147, 30)') {
+                    this.style.backgroundColor = '#e8841a';
+                } else if (this.style.color === 'rgb(247, 147, 30)') {
+                    this.style.backgroundColor = 'rgba(247, 147, 30, 0.1)';
+                }
+            });
+            
+            btn.addEventListener('mouseleave', function() {
+                if (this.style.backgroundColor === 'rgb(232, 132, 26)') {
+                    this.style.backgroundColor = '#f7931e';
+                } else if (this.style.backgroundColor === 'rgba(247, 147, 30, 0.1)') {
+                    this.style.backgroundColor = 'transparent';
+                }
+            });
+        });
     });
     </script>
 </body>

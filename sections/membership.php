@@ -206,16 +206,16 @@ $plan_features = [
 }
 
 .tab-slider {
-    position: absolute;
-    top: 8px;
-    left: 8px;
-    width: calc(33.33% - 8px);
-    height: calc(100% - 16px);
-    background: #000000;
-    border-radius: 45px;
-    transition: all 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
-    z-index: 1;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    position: absolute !important;
+    top: 8px !important;
+    left: 8px !important;
+    width: calc(33.33% - 8px) !important;
+    height: calc(100% - 16px) !important;
+    background: #f7931e !important;
+    border-radius: 45px !important;
+    transition: all 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6) !important;
+    z-index: 1 !important;
+    box-shadow: 0 2px 8px rgba(247, 147, 30, 0.3) !important;
 }
 
 /* Membership Cards */
@@ -246,26 +246,27 @@ $plan_features = [
 }
 
 .membership-card.popular {
-    border: 2px solid #000000;
+    border: 2px solid #f7931e;
     transform: scale(1.03);
 }
 
 .membership-card.popular:hover {
     transform: scale(1.05) translateY(-10px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    box-shadow: 0 15px 35px rgba(247, 147, 30, 0.15);
 }
 
 .popular-badge {
-    position: absolute;
-    top: 25px;
-    right: -35px;
-    background: #000000;
-    color: white;
-    padding: 5px 40px;
-    font-size: 14px;
-    font-weight: 600;
-    transform: rotate(45deg);
-    z-index: 1;
+    position: absolute !important;
+    top: 25px !important;
+    right: -35px !important;
+    background: #f7931e !important;
+    color: white !important;
+    padding: 5px 40px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    transform: rotate(45deg) !important;
+    z-index: 1 !important;
+    box-shadow: 0 2px 4px rgba(247, 147, 30, 0.2) !important;
 }
 
 .card-header {
@@ -357,7 +358,7 @@ $plan_features = [
 }
 
 .card-features li.included i {
-    color: #000000;
+    color: #f7931e;
 }
 
 .card-features li.excluded {
@@ -376,22 +377,22 @@ $plan_features = [
 }
 
 .btn-rounded {
-    border-radius: 0;
-    padding: 12px 30px;
-    text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    transition: all 0.3s ease;
-    background-color: #000000;
-    border-color: #000000;
-    color: #ffffff;
+    border-radius: 0 !important;
+    padding: 12px 30px !important;
+    text-transform: uppercase !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.5px !important;
+    transition: all 0.3s ease !important;
+    background-color: #f7931e !important;
+    border-color: #f7931e !important;
+    color: #ffffff !important;
 }
 
 .btn-rounded:hover {
-    background-color: #333333;
-    border-color: #333333;
+    background-color: #e07d0e;
+    border-color: #e07d0e;
     transform: translateY(-2px);
-    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 10px rgba(247, 147, 30, 0.3);
 }
 
 /* Background Shapes */

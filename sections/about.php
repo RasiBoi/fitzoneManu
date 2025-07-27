@@ -144,7 +144,7 @@ if (!defined('FITZONE_APP')) {
         }
         
         .about-feature-icon i {
-            color: #ffffff !important;
+            color: #f7931e !important;
         }
     </style>
 </section>

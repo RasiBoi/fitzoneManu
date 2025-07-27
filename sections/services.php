@@ -156,13 +156,13 @@ if (!defined('FITZONE_APP')) {
         }
         
         .service-icon {
-            background-color: #f0f0f0;
-            color: #000;
-            border: 1px solid #000;
+            background-color: #ffffff;
+            color: #f7931e;
+            border: 1px solid #f7931e;
         }
         
         .service-icon i {
-            color: #000;
+            color: #f7931e !important;
             font-weight: bold;
         }
         

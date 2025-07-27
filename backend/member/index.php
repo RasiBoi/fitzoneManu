@@ -190,10 +190,10 @@ $active_page = 'dashboard';
 <body class="role-member black-white-theme">
     <div class="dashboard-container">
         <!-- Sidebar -->
-        <div class="sidebar" style="background-color: #fff; border-right: 1px solid #000;">
-            <div class="sidebar-header" style="border-bottom: 1px solid #000; padding: 20px;">
+        <div class="sidebar" style="background-color: #fff; border-right: 2px solid #f7931e;">
+            <div class="sidebar-header" style="border-bottom: 1px solid #f7931e; padding: 20px;">
                 <div class="sidebar-brand">
-                    <img src="../../assets/images/fitzone.png" alt="FitZone" style="height: 30px; filter: grayscale(100%);">
+                    <img src="../../assets/images/fitzone.png" alt="FitZone" style="height: 30px;">
                 </div>
             </div>
             
@@ -270,24 +270,24 @@ $active_page = 'dashboard';
             <!-- Top Navigation Bar -->
             <div class="topbar" style="background-color: #fff; border-bottom: 1px solid #000; padding: 15px; margin-bottom: 20px;">
                 <div class="d-flex align-items-center">
-                    <div class="toggle-sidebar me-3" style="color: #000; cursor: pointer;">
+                    <div class="toggle-sidebar me-3" style="color: #f7931e; cursor: pointer;">
                         <i class="fas fa-bars"></i>
                     </div>
                     <div class="topbar-title" style="color: #000; font-weight: 600; font-size: 1.2rem;">
-                        Dashboard
+                        <span style="color: #f7931e;">Dashboard</span>
                     </div>
                 </div>
                 
                 <div class="topbar-right">
                     <div class="dropdown">
                         <div class="user-dropdown d-flex align-items-center" data-bs-toggle="dropdown" style="cursor: pointer;">
-                            <span class="username d-none d-sm-inline me-2" style="color: #000; font-weight: 500;"><?php echo htmlspecialchars($username); ?></span>
-                            <i class="fas fa-chevron-down small" style="color: #000;"></i>
+                            <span class="username d-none d-sm-inline me-2" style="color: #f7931e; font-weight: 500;"><?php echo htmlspecialchars($username); ?></span>
+                            <i class="fas fa-chevron-down small" style="color: #f7931e;"></i>
                         </div>
                         
-                        <ul class="dropdown-menu dropdown-menu-end" style="background-color: #fff; border: 1px solid #000; border-radius: 0; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
-                            <li><a class="dropdown-item" href="profile.php" style="color: #000; padding: 10px 15px;"><i class="fas fa-user me-2"></i>My Profile</a></li>
-                            <li><a class="dropdown-item" href="../../logout.php" style="color: #000; padding: 10px 15px;"><i class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
+                        <ul class="dropdown-menu dropdown-menu-end" style="background-color: #fff; border: 1px solid #f7931e; border-radius: 8px; box-shadow: 0 2px 10px rgba(247, 147, 30, 0.1);">
+                            <li><a class="dropdown-item" href="profile.php" style="color: #000; padding: 10px 15px; transition: all 0.3s;"><i class="fas fa-user me-2" style="color: #f7931e;"></i>My Profile</a></li>
+                            <li><a class="dropdown-item" href="../../logout.php" style="color: #000; padding: 10px 15px; transition: all 0.3s;"><i class="fas fa-sign-out-alt me-2" style="color: #f7931e;"></i>Logout</a></li>
                         </ul>
                     </div>
                 </div>
@@ -296,12 +296,12 @@ $active_page = 'dashboard';
             <!-- Page Content -->
             <div class="content">
                 <!-- Welcome Banner -->
-                <div class="welcome-banner mb-4" style="background-color: #f8f8f8; border: 1px solid #000; border-radius: 5px; padding: 20px;">
+                <div class="welcome-banner mb-4" style="background-color: #fff; border: 2px solid #f7931e; border-radius: 5px; padding: 20px;">
                     <div class="welcome-message">
-                        <h3>Welcome back, <?php echo htmlspecialchars(isset($user['first_name']) ? $user['first_name'] : $username); ?>!</h3>
-                        <p class="mb-0">
+                        <h3 style="color: #000;">Welcome back, <span style="color: #f7931e;"><?php echo htmlspecialchars(isset($user['first_name']) ? $user['first_name'] : $username); ?></span>!</h3>
+                        <p class="mb-0" style="color: #000;">
                             <?php if ($has_membership): ?>
-                                You have <?php echo $days_remaining; ?> days remaining on your <?php echo $has_membership['membership_type']; ?> membership.
+                                You have <span style="color: #f7931e; font-weight: bold;"><?php echo $days_remaining; ?></span> days remaining on your <?php echo $has_membership['membership_type']; ?> membership.
                             <?php else: ?>
                                 You don't have an active membership. Visit the membership page to get started.
                             <?php endif; ?>
@@ -313,17 +313,17 @@ $active_page = 'dashboard';
                 <div class="row mb-4">
                     <!-- Membership Status Widget -->
                     <div class="col-md-6 mb-3">
-                        <div class="membership-info" style="background: #fff; border: 1px solid #000; border-radius: 5px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                        <div class="membership-info" style="background: #fff; border: 2px solid #f7931e; border-radius: 5px; padding: 20px; box-shadow: 0 4px 8px rgba(247, 147, 30, 0.1);">
                             <div class="text-center mb-3">
-                                <div style="width: 50px; height: 50px; border-radius: 50%; background-color: #000; color: #fff; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-size: 20px;">
+                                <div style="width: 50px; height: 50px; border-radius: 50%; background-color: #f7931e; color: #fff; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-size: 20px;">
                                     <i class="<?php echo $has_membership ? 'fas fa-check' : 'fas fa-exclamation'; ?>"></i>
                                 </div>
                                 <h5 style="color: #000; font-weight: bold;">Membership Status</h5>
                                 <p class="mb-1">
                                     <?php if ($has_membership): ?>
-                                        <span style="background-color: #000; color: #fff; padding: 3px 10px; border-radius: 3px; font-size: 12px; font-weight: bold;">Active</span> <?php echo $has_membership['membership_type']; ?> Plan
+                                        <span style="background-color: #f7931e; color: #fff; padding: 3px 10px; border-radius: 3px; font-size: 12px; font-weight: bold;">Active</span> <?php echo $has_membership['membership_type']; ?> Plan
                                     <?php else: ?>
-                                        <span style="background-color: #000; color: #fff; padding: 3px 10px; border-radius: 3px; font-size: 12px; font-weight: bold;">Inactive</span> No active membership
+                                        <span style="background-color: #f7931e; color: #fff; padding: 3px 10px; border-radius: 3px; font-size: 12px; font-weight: bold;">Inactive</span> No active membership
                                     <?php endif; ?>
                                 </p>
                             </div>
@@ -345,7 +345,7 @@ $active_page = 'dashboard';
                                         $used_days = $total_days - $days_remaining;
                                         $percentage = ($used_days / $total_days) * 100;
                                         ?>
-                                        <div class="progress-bar" role="progressbar" style="width: <?php echo $percentage; ?>%; background-color: #000;" aria-valuenow="<?php echo $percentage; ?>" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar" role="progressbar" style="width: <?php echo $percentage; ?>%; background-color: #f7931e;" aria-valuenow="<?php echo $percentage; ?>" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                     <div class="d-flex justify-content-between mb-3">
                                         <span style="color: #666; font-size: 12px;">Start: <?php echo date('M d, Y', strtotime($has_membership['start_date'])); ?></span>
@@ -353,12 +353,12 @@ $active_page = 'dashboard';
                                     </div>
                                 </div>
                                 <div class="text-center">
-                                    <a href="membership.php" class="btn btn-sm" style="border: 1px solid #000; color: #000; background-color: transparent; padding: 5px 15px; font-weight: 500; transition: all 0.3s;">View Details</a>
+                                    <a href="membership.php" class="btn btn-sm" style="border: 1px solid #f7931e; color: #f7931e; background-color: transparent; padding: 5px 15px; font-weight: 500; transition: all 0.3s;">View Details</a>
                                 </div>
                             <?php else: ?>
                                 <div class="text-center">
                                     <p style="color: #333;">Get access to all our facilities and classes with a membership plan.</p>
-                                    <a href="membership.php" class="btn" style="background-color: #000; color: #fff; border: none; padding: 8px 20px; font-weight: 500; border-radius: 4px;">Get Membership</a>
+                                    <a href="membership.php" class="btn" style="background-color: #f7931e; color: #fff; border: none; padding: 8px 20px; font-weight: 500; border-radius: 4px;">Get Membership</a>
                                 </div>
                             <?php endif; ?>
                         </div>
@@ -369,38 +369,38 @@ $active_page = 'dashboard';
                         <div class="row">
                             <div class="col-6 mb-3">
                                 <div class="stat-box" style="background: #fff; border: 1px solid #000; border-radius: 5px; padding: 15px; position: relative; text-align: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-                                    <div class="stat-icon" style="position: absolute; top: 10px; right: 10px; color: #000;">
+                                    <div class="stat-icon" style="position: absolute; top: 10px; right: 10px; color: #f7931e;">
                                         <i class="fas fa-dumbbell"></i>
                                     </div>
                                     <div class="stat-value" style="font-size: 24px; font-weight: bold; color: #000;"><?php echo count($upcoming_classes); ?></div>
-                                    <div class="stat-label" style="font-size: 14px; color: #000;">Upcoming Classes</div>
+                                    <div class="stat-label" style="font-size: 14px; color: #f7931e;">Upcoming Classes</div>
                                 </div>
                             </div>
                             <div class="col-6 mb-3">
                                 <div class="stat-box" style="background: #fff; border: 1px solid #000; border-radius: 5px; padding: 15px; position: relative; text-align: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-                                    <div class="stat-icon" style="position: absolute; top: 10px; right: 10px; color: #000;">
+                                    <div class="stat-icon" style="position: absolute; top: 10px; right: 10px; color: #f7931e;">
                                         <i class="fas fa-clock"></i>
                                     </div>
                                     <div class="stat-value" style="font-size: 24px; font-weight: bold; color: #000;"><?php echo $latest_stats ? $latest_stats['workout_duration'] : '0'; ?></div>
-                                    <div class="stat-label" style="font-size: 14px; color: #000;">Workout Minutes</div>
+                                    <div class="stat-label" style="font-size: 14px; color: #f7931e;">Workout Minutes</div>
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="stat-box" style="background: #fff; border: 1px solid #000; border-radius: 5px; padding: 15px; position: relative; text-align: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-                                    <div class="stat-icon" style="position: absolute; top: 10px; right: 10px; color: #000;">
+                                    <div class="stat-icon" style="position: absolute; top: 10px; right: 10px; color: #f7931e;">
                                         <i class="fas fa-fire"></i>
                                     </div>
                                     <div class="stat-value" style="font-size: 24px; font-weight: bold; color: #000;"><?php echo $latest_stats ? $latest_stats['calories_burned'] : '0'; ?></div>
-                                    <div class="stat-label" style="font-size: 14px; color: #000;">Calories Burned</div>
+                                    <div class="stat-label" style="font-size: 14px; color: #f7931e;">Calories Burned</div>
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="stat-box" style="background: #fff; border: 1px solid #000; border-radius: 5px; padding: 15px; position: relative; text-align: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-                                    <div class="stat-icon" style="position: absolute; top: 10px; right: 10px; color: #000;">
+                                    <div class="stat-icon" style="position: absolute; top: 10px; right: 10px; color: #f7931e;">
                                         <i class="fas fa-weight"></i>
                                     </div>
                                     <div class="stat-value" style="font-size: 24px; font-weight: bold; color: #000;"><?php echo $latest_stats ? $latest_stats['weight'] : '--'; ?></div>
-                                    <div class="stat-label" style="font-size: 14px; color: #000;">Weight (kg)</div>
+                                    <div class="stat-label" style="font-size: 14px; color: #f7931e;">Weight (kg)</div>
                                 </div>
                             </div>
                         </div>
@@ -412,11 +412,11 @@ $active_page = 'dashboard';
                     <div class="col-12">
                         <div class="widget" style="background-color: #fff; border: 1px solid #000; border-radius: 5px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
                             <div class="widget-header" style="margin-bottom: 15px; border-bottom: 1px solid #000; padding-bottom: 10px;">
-                                <div class="widget-title" style="font-size: 18px; font-weight: bold; color: #000;">Quick Access</div>
+                                <div class="widget-title" style="font-size: 18px; font-weight: bold; color: #f7931e;">Quick Access</div>
                             </div>
                             <div class="widget-body">
                                 <div class="quick-links" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px;">
-                                    <a href="classes.php" class="quick-link" style="display: flex; align-items: center; padding: 15px; text-decoration: none; color: #000; border: 1px solid #000; border-radius: 5px; transition: all 0.3s ease;">
+                                    <a href="classes.php" class="quick-link" style="display: flex; align-items: center; padding: 15px; text-decoration: none; color: #000; border: 1px solid #f7931e; border-radius: 5px; transition: all 0.3s ease; hover: background-color: rgba(247, 147, 30, 0.1);">
                                         <div class="quick-link-icon" style="margin-right: 15px; font-size: 24px;">
                                             <i class="fas fa-dumbbell"></i>
                                         </div>
@@ -426,8 +426,8 @@ $active_page = 'dashboard';
                                         </div>
                                     </a>
                                     
-                                    <a href="schedule.php" class="quick-link" style="display: flex; align-items: center; padding: 15px; text-decoration: none; color: #000; border: 1px solid #000; border-radius: 5px; transition: all 0.3s ease;">
-                                        <div class="quick-link-icon" style="margin-right: 15px; font-size: 24px;">
+                                    <a href="schedule.php" class="quick-link" style="display: flex; align-items: center; padding: 15px; text-decoration: none; color: #000; border: 1px solid #f7931e; border-radius: 5px; transition: all 0.3s ease;">
+                                        <div class="quick-link-icon" style="margin-right: 15px; font-size: 24px; color: #f7931e;">
                                             <i class="fas fa-calendar-alt"></i>
                                         </div>
                                         <div>
@@ -436,8 +436,8 @@ $active_page = 'dashboard';
                                         </div>
                                     </a>
                                     
-                                    <a href="progress.php" class="quick-link" style="display: flex; align-items: center; padding: 15px; text-decoration: none; color: #000; border: 1px solid #000; border-radius: 5px; transition: all 0.3s ease;">
-                                        <div class="quick-link-icon" style="margin-right: 15px; font-size: 24px;">
+                                    <a href="progress.php" class="quick-link" style="display: flex; align-items: center; padding: 15px; text-decoration: none; color: #000; border: 1px solid #f7931e; border-radius: 5px; transition: all 0.3s ease;">
+                                        <div class="quick-link-icon" style="margin-right: 15px; font-size: 24px; color: #f7931e;">
                                             <i class="fas fa-chart-line"></i>
                                         </div>
                                         <div>
@@ -446,8 +446,8 @@ $active_page = 'dashboard';
                                         </div>
                                     </a>
                                     
-                                    <a href="nutrition.php" class="quick-link" style="display: flex; align-items: center; padding: 15px; text-decoration: none; color: #000; border: 1px solid #000; border-radius: 5px; transition: all 0.3s ease;">
-                                        <div class="quick-link-icon" style="margin-right: 15px; font-size: 24px;">
+                                    <a href="nutrition.php" class="quick-link" style="display: flex; align-items: center; padding: 15px; text-decoration: none; color: #000; border: 1px solid #f7931e; border-radius: 5px; transition: all 0.3s ease;">
+                                        <div class="quick-link-icon" style="margin-right: 15px; font-size: 24px; color: #f7931e;">
                                             <i class="fas fa-utensils"></i>
                                         </div>
                                         <div>

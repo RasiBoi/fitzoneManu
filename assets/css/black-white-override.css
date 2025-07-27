@@ -131,7 +131,7 @@ section[style*="background"] {
 }
 
 .hero-overlay {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.85)) !important;
+    display: none !important;
 }
 
 .hero-subtitle {
@@ -165,7 +165,7 @@ section[style*="background"] {
     background-position: center right !important;
     background-size: cover !important;
     background-repeat: no-repeat !important;
-    filter: grayscale(100%) !important;
+    filter: none !important;
     border-radius: 10px !important;
 }
 
@@ -484,12 +484,12 @@ section[style*="background"] {
 }
 
 .class-image img {
-    filter: grayscale(100%) !important;
+    filter: none !important;
     transition: all 0.3s ease !important;
 }
 
 .class-card:hover .class-image img {
-    filter: grayscale(80%) !important;
+    filter: none !important;
 }
 
 /* Trainers Section Black and White Overrides */
@@ -531,7 +531,7 @@ section[style*="background"] {
 }
 
 .trainer-image {
-    filter: grayscale(100%) !important;
+    filter: none !important;
     border: 1px solid #000000 !important;
 }
 
@@ -568,7 +568,7 @@ section[style*="background"] {
 }
 
 .tab-slider {
-    background: #000000 !important;
+    background: #f7931e !important;
 }
 
 .duration-option {
@@ -585,11 +585,11 @@ section[style*="background"] {
 }
 
 .membership-card.popular {
-    border: 2px solid #000000 !important;
+    border: 2px solid #f7931e !important;
 }
 
 .popular-badge {
-    background: #000000 !important;
+    background: #f7931e !important;
 }
 
 .card-header {
@@ -614,17 +614,18 @@ section[style*="background"] {
 }
 
 .card-features li.included i {
-    color: #000000 !important;
+    color: #f7931e !important;
 }
 
 .btn-rounded {
-    background-color: #000000 !important;
-    border-color: #000000 !important;
+    background-color: #f7931e !important;
+    border-color: #f7931e !important;
 }
 
 .btn-rounded:hover {
-    background-color: #333333 !important;
-    border-color: #333333 !important;
+    background-color: #e07d0e !important;
+    border-color: #e07d0e !important;
+    box-shadow: 0 5px 15px rgba(247, 147, 30, 0.3) !important;
 }
 
 /* Additional navbar text selectors to ensure visibility */
